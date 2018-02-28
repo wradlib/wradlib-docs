@@ -10,4 +10,4 @@ dependencies:
   - wradlib
   - nbsphinx
   - pip:
-    - sphinxcontrib_bibtext
+    - sphinxcontrib-bibtext
