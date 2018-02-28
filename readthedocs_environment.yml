@@ -7,7 +7,14 @@ dependencies:
   - nbconvert
   - ipykernel
   - sphinx_rtd_theme
-  - wradlib
   - nbsphinx
+  - gdal
+  - numpy
+  - scipy
+  - matplotlib
+  - netcdf4
+  - h5py
+  - deprecation
   - pip:
     - sphinxcontrib-bibtex
+    - git+https://github.com/wradlib/wradlib.git@strip1.0.0
