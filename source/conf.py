@@ -37,7 +37,6 @@ extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.autosummary',
               'sphinx.ext.intersphinx',
               'sphinxcontrib.bibtex',
-              'matplotlib.sphinxext.plot_directive',
               'nbsphinx',
               'IPython.sphinxext.ipython_console_highlighting',
               ]
@@ -71,6 +70,44 @@ master_doc = 'index'
 # General information about the project.
 project = u'wradlib'
 copyright = u'2011-2018, wradlib developers'
+
+# Mock most modules on read_the_docs
+on_rtd = os.environ.get('READTHEDOCS') == 'True'
+
+if on_rtd:
+    import pip
+    try:
+        pip.main(["install", "--no-deps",
+                  "git+https://github.com/wradlib/wradlib.git@strip1.0.0"])
+    except SystemExit as e:
+        pass
+
+    import sys
+    from unittest.mock import MagicMock
+
+
+    class Mock(MagicMock):
+        @classmethod
+        def __getattr__(cls, name):
+                return MagicMock()
+
+    MOCK_MODULES = ['scipy', 'scipy.spatial', 'scipy.stats',
+                    'scipy.interpolate', 'scipy.ndimage',
+                    'scipy.ndimage.interpolation',
+                    'scipy.ndimage.filters', 'scipy.signal',
+                    'matplotlib', 'matplotlib.path', 'matplotlib.patches',
+                    'matplotlib.pyplot', 'matplotlib.projections',
+                    'matplotlib.transforms',
+                    'matplotlib.ticker',
+                    'matplotlib.dates',
+                    'matplotlib.collections',
+                    'mpl_toolkits',
+                    'mpl_toolkits.axisartist',
+                    'mpl_toolkits.axisartist.grid_finder',
+                    'mpl_toolkits.axisartist.angle_helper',
+                    'h5py',
+                    'netCDF4', 'osgeo']
+    sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
