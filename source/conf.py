@@ -70,7 +70,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'wradlib'
-copyright = u'2011-2016, wradlib developers'
+copyright = u'2011-2018, wradlib developers'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -315,21 +315,21 @@ napoleon_use_ivar = False
 napoleon_use_param = True
 napoleon_use_rtype = False
 
-# multiple releases section
-# if on CI get TAGGED_VERSIONS otherwise empty dict
-releases = []
-if 'CI' in os.environ and os.environ['CI'] == 'true':
-    if 'TAGGED_VERSIONS' in os.environ:
-        for ver in os.environ['TAGGED_VERSIONS'].split("\n"):
-            releases.append([ver, ver])
-        releases.sort(reverse=True)
-# if tagged release insert tag
-if 'TAG' in os.environ and os.environ['TAG']:
-    releases.insert(0, [os.environ['TAG'], os.environ['TAG']])
-# have latest anyway
-releases.insert(0, ['latest', 'latest'])
-# push releases into html_context
-html_context = {'releases': releases, }
+# # multiple releases section
+# # if on CI get TAGGED_VERSIONS otherwise empty dict
+# releases = []
+# if 'CI' in os.environ and os.environ['CI'] == 'true':
+#     if 'TAGGED_VERSIONS' in os.environ:
+#         for ver in os.environ['TAGGED_VERSIONS'].split("\n"):
+#             releases.append([ver, ver])
+#         releases.sort(reverse=True)
+# # if tagged release insert tag
+# if 'TAG' in os.environ and os.environ['TAG']:
+#     releases.insert(0, [os.environ['TAG'], os.environ['TAG']])
+# # have latest anyway
+# releases.insert(0, ['latest', 'latest'])
+# # push releases into html_context
+# html_context = {'releases': releases, }
 
 # -- pybtex definitions for changing citation reference labels ----------------
 from pybtex.style.formatting.unsrt import Style  # noqa
