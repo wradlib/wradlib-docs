@@ -16,6 +16,7 @@
 
 import os
 import glob
+import subprocess
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -75,6 +76,12 @@ copyright = u'2011-2018, wradlib developers'
 on_rtd = os.environ.get('READTHEDOCS') == 'True'
 
 if on_rtd:
+    branch = 'devel'
+    repourl = 'https://github.com/wradlib/wradlib-notebooks.git'
+    reponame = 'wradlib-notebooks'
+    subprocess.check_call(['git', 'clone', '-b', branch, repourl, reponame])
+    subprocess.check_call(['mv', 'wradlib-notebooks/notebooks', '.'])
+    subprocess.check_call(['rm', '-rf', 'wradlib-notebooks'])
     import pip
     try:
         pip.main(["install", "--no-deps",
