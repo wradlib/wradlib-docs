@@ -76,18 +76,19 @@ copyright = u'2011-2018, wradlib developers'
 on_rtd = os.environ.get('READTHEDOCS') == 'True'
 
 if on_rtd:
-    branch = 'devel'
-    repourl = 'https://github.com/wradlib/wradlib-notebooks.git'
-    reponame = 'wradlib-notebooks'
-    subprocess.check_call(['git', 'clone', '-b', branch, repourl, reponame])
-    subprocess.check_call(['mv', 'wradlib-notebooks/notebooks', '.'])
-    subprocess.check_call(['rm', '-rf', 'wradlib-notebooks'])
-    import pip
-    try:
-        pip.main(["install", "--no-deps",
-                  "git+https://github.com/wradlib/wradlib.git@strip1.0.0"])
-    except SystemExit as e:
-        pass
+    if not os.path.exists('notebooks'):
+        branch = 'devel'
+        repourl = 'https://github.com/wradlib/wradlib-notebooks.git'
+        reponame = 'wradlib-notebooks'
+        subprocess.check_call(['git', 'clone', '-b', branch, repourl, reponame])
+        subprocess.check_call(['mv', 'wradlib-notebooks/notebooks', '.'])
+        subprocess.check_call(['rm', '-rf', 'wradlib-notebooks'])
+        import pip
+        try:
+            pip.main(["install", "--no-deps",
+                      "git+https://github.com/wradlib/wradlib.git@strip1.0.0"])
+        except SystemExit as e:
+            pass
 
     import sys
     from unittest.mock import MagicMock
