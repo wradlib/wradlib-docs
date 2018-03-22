@@ -8,8 +8,9 @@ Installation
 
 In order to run :math:`\omega radlib`, you need to have a Python interpreter installed on your local computer, as well as a number of Python packages (`Dependencies`_). We recommend to install `Anaconda <https://www.anaconda.com/what-is-anaconda/>`_ as it installs Python, a number of required packages, and other useful tools (e.g. spyder).
 
-Using Anaconda the installation process is harmonised across platforms. Download and install the latest Anaconda distribution from https://www.anaconda.com/download/ for your specific OS.
-We are constantly performing tests with these distributions (for python2.7 and python3 respectively).
+Using Anaconda the installation process is harmonised across platforms. Download and install the latest Anaconda distribution from https://www.anaconda.com/download/ for your specific OS. You might also consider the minimal `Miniconda <https://conda.io/miniconda.html/>`_ if you do not want to install a full scientific python stack.
+
+We are constantly performing tests with these distributions (for python versions 2.7, 3.5 and 3.6 respectively).
 
 If your Anaconda Python installation is working, the following command (in a console) should work::
 
@@ -73,7 +74,7 @@ The Python prompt should appear. Then type::
 
     >>> import wradlib
     >>> wradlib.__version__
-    '0.10.1'
+    '1.0.0'
 
 If everything is ok, this will show the running :math:`\omega radlib` version. If the :math:`\omega radlib` package is not found by the interpreter, you will get::
 
@@ -95,22 +96,22 @@ Bleeding edge code
 Alternatively, you can add the :math:`\omega radlib` directory to your environment variable ``PYTHONPATH``.
 
 
-Installing via easy_install
+Installing via pip
 ---------------------------
 
-Although we recommend using the Anaconda Python Environment you can install :math:`\omega radlib` from PyPi via easy_install.
+Although we recommend using the Anaconda Python Environment you can install :math:`\omega radlib` from `PyPi <https://pypi.org/project/wradlib/>`_ via ``pip``.
 
 Open a terminal and run::
 
-    $ easy_install wradlib
+    $ pip install wradlib
 
 Depending on your system you might need to be root (or sudo the above command) for this to work.
-easy_install will then fetch the source distribution from the Python Package Index and run the installation.
+``pip`` will then fetch the source distribution from the Python Package Index and run the installation.
 
 Afterwards it will check for any dependencies not met, yet.
 
-Be aware that with easy_install we can only look for python-module dependencies.
-For example the numpy module itself depends on some other libraries, which need to be present in order for the module to compile properly after being downloaded by easy_install. We have no control over these dependencies and it is rather hard to give a complete overview.
+Be aware that using ``pip`` we can only look for python-module dependencies.
+For example the numpy module itself depends on some other libraries, which need to be present in order for the module to compile properly after being downloaded by ``pip``. We have no control over these dependencies and it is rather hard to give a complete overview.
 
 Therefore we recommend trying to satisfy the dependencies using your favorite package management system.
 
@@ -127,17 +128,17 @@ Dependencies
 +------------+-----------+-------------+
 | Package    |    min    | recommended |
 +============+===========+=============+
-| numpy      | >= 1.6.1  | >= 1.10.1   |
+| numpy      | >= 1.6.1  | >= 1.14.0   |
 +------------+-----------+-------------+
-| matplotlib | >= 1.1.0  | >= 1.5.1    |
+| matplotlib | >= 1.5.1  | >= 2.1.0    |
 +------------+-----------+-------------+
-| scipy      | >= 0.9    | >= 0.17.0   |
+| scipy      | >= 0.9    | >= 1.0.0    |
 +------------+-----------+-------------+
-| h5py       | >= 2.0.1  | >= 2.5.0    |
+| h5py       | >= 2.0.1  | >= 2.7.0    |
 +------------+-----------+-------------+
-| netCDF4    | >= 1.0    | >= 1.2.2    |
+| netCDF4    | >= 1.0    | >= 1.3.0    |
 +------------+-----------+-------------+
-| gdal       | >= 1.9    | >= 2.1.0    |
+| gdal       | >= 1.9    | >= 2.2.0    |
 +------------+-----------+-------------+
 
 You can check whether the required `Dependencies`_ are available on your computer by opening a Python console and enter:
@@ -173,7 +174,7 @@ Now the speedup module should be available.
 
 **xmltodict**
 
-We use xmltodict to convert the Rainbow Data Files (which have a metadata XML header) to an ordered dict. It is easily installed with `pip`::
+We use xmltodict to convert the Rainbow Data Files (which have a metadata XML header) to an ordered dict. It is easily installed with ``pip``::
 
     $ pip install xmltodict
 
@@ -185,9 +186,9 @@ Known Issues
 
 Depending on your OS and installation method you may encounter different problems. Here are some guidelines for attacking them.
 
-Generally it is a good idea to use your systems package manager to install dependencies. This will also take account for other needed bindings, libs etc. Windows user should install one of the (scientific) python packages to resolve the problems there.
+We strongly recommend using the Anaconda conda package and environment manager (see `Installation`_). Using `conda-forge <https://conda-forge.org/>`_ we will maintain the `wradlib-feedstock <https://github.com/conda-forge/wradlib-feedstock/>`_ for constant availability of recent :math:`\omega radlib` versions.
 
-We recommend using the Anaconda conda package and environment manager (see `Installation`_).
+If you can't use Anaconda/Miniconda, it is generally a good idea to use your systems package manager to install dependencies. This will also take account for other needed bindings, libs etc.
 
 If you encounter problems installing :math:`\omega radlib`, check on your favorite search engine or create an issue `here <https://github.com/wradlib/wradlib/issues>`_ with details on the problem or send an email on the `wradlib-users <https://groups.google.com/forum/?fromgroups=#!forum/wradlib-users>`_ mailing list.
 

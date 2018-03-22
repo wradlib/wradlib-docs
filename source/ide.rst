@@ -4,7 +4,7 @@ Integrated Development Environments for Python
 Development Environments vs. Notebooks
 --------------------------------------
 
-Jupyter notebooks are great for courses and for interactive data exploration. However, they are not suited fopr developing applications. Once you start to build applications or scripts on top of :math:`\omega radlib`, you should use a suitable Integrated Development Environmemt (IDE). IDEs give you the opportunity for organising different source files, debugging, avraible inspection and a lot more. 
+Jupyter notebooks are great for courses and for interactive data exploration. However, they are not suited for developing applications. Once you start to build applications or scripts on top of :math:`\omega radlib`, you should use a suitable Integrated Development Environmemt (IDE). IDEs give you the opportunity for organising different source files, debugging, avraible inspection and a lot more.
 
 
 Some suitable IDEs
