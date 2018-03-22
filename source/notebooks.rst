@@ -10,6 +10,7 @@ and example scripts distributed with the source code.
    :maxdepth: 2
    
    jupyter.rst
+   ide.rst
    notebooks/learnpython.ipynb   
    notebooks/basics.ipynb
    notebooks/fileio.ipynb
@@ -18,16 +19,9 @@ and example scripts distributed with the source code.
    notebooks/classify.ipynb
    notebooks/georeferencing.ipynb
    notebooks/match3d/wradlib_match_workflow.ipynb
-   notebooks/develop.ipynb
    notebooks/interpolation/wradlib_ipol_example.ipynb
    notebooks/multisensor/wradlib_adjust_example.ipynb
    notebooks/verification/wradlib_verify_example.ipynb
    notebooks/recipes.ipynb
    notebooks/radolan.ipynb
    notebooks/zonalstats/wradlib_zonalstats_classes.ipynb
-
-
-
-
-
-
