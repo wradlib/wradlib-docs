@@ -17,7 +17,7 @@ Building the docs
 -----------------
 In order to build the documentation, you need to download the `wradlib-docs <https://github.com/wradlib/wradlib-docs>`_ repository. You need to satisfy a few more dependencies which are mainly related to Sphinx. These are specified in the `readthedocs_environment.yml <https://github.com/wradlib/wradlib-docs/blob/master/readthedocs_environment.yml>`_.
 
-Once these requirements are met, you can open a console window in the folder wradlib/doc and execute ``sphinx-build -v -b html source/ doc-build``. This will give you the latest documentation under the wradlib-docs/doc-build directory. Simply open the index.html file to view the documentation.
+Once these requirements are met, you can open a console window within the ``wradlib-docs``-repository and execute ``sphinx-build -v -b html source/ doc-build``. This will give you the latest documentation under the ``wradlib-docs/doc-build`` directory. Simply open the index.html file to view the documentation.
 
 
 Testing
