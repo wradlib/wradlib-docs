@@ -80,32 +80,32 @@ if on_rtd:
         except SystemExit as e:
             pass
 
-    import sys
-    from unittest.mock import MagicMock
+import sys
+from unittest.mock import MagicMock
 
 
-    class Mock(MagicMock):
-        @classmethod
-        def __getattr__(cls, name):
-                return MagicMock()
+class Mock(MagicMock):
+    @classmethod
+    def __getattr__(cls, name):
+            return MagicMock()
 
-    MOCK_MODULES = ['scipy', 'scipy.spatial', 'scipy.stats',
-                    'scipy.interpolate', 'scipy.ndimage',
-                    'scipy.ndimage.interpolation',
-                    'scipy.ndimage.filters', 'scipy.signal',
-                    'matplotlib', 'matplotlib.path', 'matplotlib.patches',
-                    'matplotlib.pyplot', 'matplotlib.projections',
-                    'matplotlib.transforms',
-                    'matplotlib.ticker',
-                    'matplotlib.dates',
-                    'matplotlib.collections',
-                    'mpl_toolkits',
-                    'mpl_toolkits.axisartist',
-                    'mpl_toolkits.axisartist.grid_finder',
-                    'mpl_toolkits.axisartist.angle_helper',
-                    'h5py',
-                    'netCDF4', 'osgeo']
-    sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
+MOCK_MODULES = ['scipy', 'scipy.spatial', 'scipy.stats',
+                'scipy.interpolate', 'scipy.ndimage',
+                'scipy.ndimage.interpolation',
+                'scipy.ndimage.filters', 'scipy.signal',
+                'matplotlib', 'matplotlib.path', 'matplotlib.patches',
+                'matplotlib.pyplot', 'matplotlib.projections',
+                'matplotlib.transforms',
+                'matplotlib.ticker',
+                'matplotlib.dates',
+                'matplotlib.collections',
+                'mpl_toolkits',
+                'mpl_toolkits.axisartist',
+                'mpl_toolkits.axisartist.grid_finder',
+                'mpl_toolkits.axisartist.angle_helper',
+                'h5py',
+                'netCDF4', 'osgeo']
+sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
 # get wradlib version
 import wradlib  # noqa
