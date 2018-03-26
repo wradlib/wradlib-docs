@@ -8,7 +8,9 @@ dependencies:
   - ipykernel
   - sphinx_rtd_theme
   - sphinxcontrib-bibtex
-  - nbsphinx
   - numpy
   - deprecation
   - git
+  # - nbsphinx
+  - pip:
+    - git+https://github.com/spatialaudio/nbsphinx.git
