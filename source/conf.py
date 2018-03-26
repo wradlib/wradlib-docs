@@ -2,8 +2,6 @@
 #
 # wradlib documentation build configuration file, created by
 # sphinx-quickstart on Wed Oct 26 13:48:08 2011.
-# adapted with code from
-# https://github.com/ARM-DOE/pyart/blob/master/doc/source/conf.py
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -88,6 +86,7 @@ class Mock(MagicMock):
     @classmethod
     def __getattr__(cls, name):
             return MagicMock()
+
 
 MOCK_MODULES = ['scipy', 'scipy.spatial', 'scipy.stats',
                 'scipy.interpolate', 'scipy.ndimage',

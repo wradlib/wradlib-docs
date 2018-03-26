@@ -13,4 +13,4 @@ dependencies:
   - git
   # - nbsphinx
   - pip:
-    - git+https://github.com/spatialaudio/nbsphinx.git
+    - git+https://github.com/spatialaudio/nbsphinx.git@master
