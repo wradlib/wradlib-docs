@@ -60,24 +60,37 @@ master_doc = 'index'
 project = u'wradlib'
 copyright = u'2011-2018, wradlib developers'
 
-# Mock most modules on read_the_docs
+# check readthedocs
 on_rtd = os.environ.get('READTHEDOCS') == 'True'
-
 if on_rtd:
-    if not os.path.exists('notebooks'):
-        branch = 'devel'
-        repourl = 'https://github.com/wradlib/wradlib-notebooks.git'
-        reponame = 'wradlib-notebooks'
-        subprocess.check_call(['git', 'clone', '-b', branch, repourl, reponame])
-        subprocess.check_call(['mv', 'wradlib-notebooks/notebooks', '.'])
-        subprocess.check_call(['rm', '-rf', 'wradlib-notebooks'])
-        import pip
-        try:
-            pip.main(["install", "--no-deps",
-                      "git+https://github.com/wradlib/wradlib.git@strip1.0.0"])
-        except SystemExit as e:
-            pass
+    # rtd_version will be either 'latest' or some tag name which should
+    # correspond to the wradlib and wradlib-docs tag
+    rtd_version = os.environ.get('READTHEDOCS_VERSION', 'latest')
+    print("RTD Version: {}".format(rtd_version))
+    if rtd_version == 'latest':
+        wradlib_notebooks_branch = 'devel'
+        wradlib_branch_or_tag = 'master'
+    else:
+        wradlib_notebooks_branch = rtd_version
+        wradlib_branch_or_tag = rtd_version
+    repourl = 'https://github.com/wradlib/wradlib-notebooks.git'
+    reponame = 'wradlib-notebooks'
+    # first remove any possible left overs
+    subprocess.check_call(['rm', '-rf', 'wradlib-notebooks'])
+    subprocess.check_call(['rm', '-rf', 'notebooks'])
+    subprocess.check_call(['git', 'clone', '-b', wradlib_notebooks_branch,
+                           repourl, reponame])
+    subprocess.check_call(['mv', 'wradlib-notebooks/notebooks', '.'])
+    subprocess.check_call(['rm', '-rf', 'wradlib-notebooks'])
+    import pip
+    try:
+        pip.main(["install", "--no-deps",
+                  "git+https://github.com/wradlib/wradlib.git@{}"
+                  "".format(wradlib_branch_or_tag)])
+    except SystemExit as e:
+        pass
 
+# Mock most modules
 import sys
 from unittest.mock import MagicMock
 

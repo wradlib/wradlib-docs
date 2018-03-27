@@ -6,4 +6,6 @@ This repository consists of the wradlib documentation source. wradlib uses `read
 
 The final documenation can is available here:
 
-http://wradlib.org/wradlib-docs
+- http://docs.wradlib.org
+- http://wradlib-docs.readthedocs.io
+- http://wradlib-docs.rtfd.io
