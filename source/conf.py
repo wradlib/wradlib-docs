@@ -62,6 +62,7 @@ copyright = u'2011-2018, wradlib developers'
 
 # check readthedocs
 on_rtd = os.environ.get('READTHEDOCS') == 'True'
+
 if on_rtd:
     # rtd_version will be either 'latest' or some tag name which should
     # correspond to the wradlib and wradlib-docs tag
@@ -84,7 +85,7 @@ if on_rtd:
     subprocess.check_call(['rm', '-rf', 'wradlib-notebooks'])
     import pip
     try:
-        pip.main(["install", "--no-deps",
+        pip.main(["install", "--no-deps", "--upgrade",
                   "git+https://github.com/wradlib/wradlib.git@{}"
                   "".format(wradlib_branch_or_tag)])
     except SystemExit as e:
