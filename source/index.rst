@@ -30,6 +30,7 @@ This documentation is under steady development. It provides a complete library r
    reference
    community
    dev_setup
+   docker
    zreferences
    release_notes
 
