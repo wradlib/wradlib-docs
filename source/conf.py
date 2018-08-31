@@ -73,7 +73,8 @@ if on_rtd:
         wradlib_branch_or_tag = 'master'
     elif rtd_version == 'stable':
         tag = subprocess.check_output(['git', 'describe',
-                                       '--abbrev=0', '--tags'])
+                                       '--abbrev=0', '--tags'],
+                                      universal_newlines=True).strip()
         wradlib_notebooks_branch = tag
         wradlib_branch_or_tag = tag
     else:
