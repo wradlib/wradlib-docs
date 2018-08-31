@@ -83,13 +83,11 @@ if on_rtd:
                            repourl, reponame])
     subprocess.check_call(['mv', 'wradlib-notebooks/notebooks', '.'])
     subprocess.check_call(['rm', '-rf', 'wradlib-notebooks'])
-    import pip
-    try:
-        pip.main(["install", "--no-deps", "--upgrade",
-                  "git+https://github.com/wradlib/wradlib.git@{}"
-                  "".format(wradlib_branch_or_tag)])
-    except SystemExit as e:
-        pass
+
+    # install wradlib
+    subprocess.check_call(['pip', 'install', '--no-deps', '--upgrade',
+                           "git+https://github.com/wradlib/wradlib.git@{}"
+                           "".format(wradlib_branch_or_tag)])
 
 # Mock most modules
 import sys

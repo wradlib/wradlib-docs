@@ -1,7 +1,7 @@
 channels:
   - conda-forge
 dependencies:
-  - python==3.6
+  - python=3.6
   - sphinx>=1.4
   - pandoc
   - nbconvert
@@ -12,3 +12,9 @@ dependencies:
   - deprecation
   - git
   - nbsphinx
+ # - scipy
+ # - matplotlib
+ # - h5py
+ # - netCDF4
+ # - gdal
+  - xmltodict
