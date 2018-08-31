@@ -71,9 +71,15 @@ if on_rtd:
     if rtd_version == 'latest':
         wradlib_notebooks_branch = 'devel'
         wradlib_branch_or_tag = 'master'
+    elif rtd_version == 'stable':
+        tag = subprocess.check_output(['git', 'describe',
+                                       '--abbrev=0', '--tags'])
+        wradlib_notebooks_branch = tag
+        wradlib_branch_or_tag = tag
     else:
         wradlib_notebooks_branch = rtd_version
         wradlib_branch_or_tag = rtd_version
+
     repourl = 'https://github.com/wradlib/wradlib-notebooks.git'
     reponame = 'wradlib-notebooks'
     # first remove any possible left overs
