@@ -11,6 +11,17 @@ Bleeding Edge
 
 *Nothing, so far*
 
+Version 1.1.0
+-------------
+
+**Highlights**
+
+* use with-statement in rainbow-reader
+* fix in gpm-reader and rainbow_reader
+* fix issues with cg-plot in vis-module
+* fix in gdal/ogr exception handling
+* update in versioning/release procedure
+* automatic build of devel-docs
 
 Version 1.0.0
 -------------
