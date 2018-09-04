@@ -6,7 +6,7 @@ Bibliography
 .. bibliography:: refs.bib
    :all:
    :style: wrlstyle
-   :encoding: latex+latin
+   :encoding: latin
    :labelprefix:
 
 .. rubric:: Links
@@ -14,5 +14,5 @@ Bibliography
 .. bibliography:: refs_links.bib
    :all:
    :style: plain
-   :encoding: latex+latin
+   :encoding: latin
    :labelprefix: B
