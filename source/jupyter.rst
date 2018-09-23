@@ -10,9 +10,9 @@ The documentation of :math:`\omega radlib` basically consists of two elements: t
 Interactive examples with jupyter notebooks
 -------------------------------------------
 
-All :math:`\omega radlib` examples are distributed as `jupyter notebooks <http://jupyter.org/>`_ in the `wradlib-notebooks <https://github.com/wradlib/wradlib-notebooks/>`_ repository. This way, you can interactively explore various topics. Each notebook is organized in documented code blocks. You can browse through a notebook block by block, inspect the results, and experiment with the code. However, you can also view the rendered notebooks including the example results on the web pages of this section: Each page was directly generated from :math:`\omega radlib`'s example notebooks. This way, you can copy&paste code snippets directly into your applications.
+All :math:`\omega radlib` examples are distributed as `jupyter notebooks <https://jupyter.org/>`_ in the `wradlib-notebooks <https://github.com/wradlib/wradlib-notebooks/>`_ repository. This way, you can interactively explore various topics. Each notebook is organized in documented code blocks. You can browse through a notebook block by block, inspect the results, and experiment with the code. However, you can also view the rendered notebooks including the example results on the web pages of this section: Each page was directly generated from :math:`\omega radlib`'s example notebooks. This way, you can copy&paste code snippets directly into your applications.
 
-.. note:: Are you using :math:`\omega radlib` on the `Open Virtual Machine for Cross-Platform Weather Radar Science <http://openradarscience.org/>`_? Then skip the rest: just log in, run the command ``$ ./start_notebook.sh`` and direct your browser to `http://127.0.0.1:8888/tree <http://127.0.0.1:8888/tree>`__. That's it.
+.. note:: Are you using :math:`\omega radlib` on the `Open Virtual Machine for Cross-Platform Weather Radar Science <https://openradarscience.org/>`_? Then skip the rest: just log in, run the command ``$ ./start_notebook.sh`` and direct your browser to `http://127.0.0.1:8888/tree <http://127.0.0.1:8888/tree>`__. That's it.
 
 Otherwise, you need to make sure to
 
@@ -84,7 +84,7 @@ As already pointed out above, you can just look at the rendered notebooks :doc:`
 
 If you are not sure which conda environments you have, you can check via ``conda info --envs``.
 
-If you did not install :math:`\omega radlib` on top of Anaconda, you should first check whether ``jupyter`` might already be available on your system (use e.g. ``jupyter --version``). If ``jupyter`` is not available, you should check out the `jupyter docs <http://jupyter.readthedocs.io/en/latest/install.html>`_ for alternative installation options.
+If you did not install :math:`\omega radlib` on top of Anaconda, you should first check whether ``jupyter`` might already be available on your system (use e.g. ``jupyter --version``). If ``jupyter`` is not available, you should check out the `jupyter docs <https://jupyter.readthedocs.io/en/latest/install.html>`_ for alternative installation options.
 
 
 I prefer simple Python scripts instead of notebooks
