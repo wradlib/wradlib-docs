@@ -24,16 +24,16 @@ Testing
 -------
 :math:`\omega radlib` uses the `unittest <http://pythontesting.net/framework/unittest/unittest-introduction/>`_ framework. New functions should come with corresponding unittests in the ``wradlib/wradlib/tests`` directory. Just have a look at `available tests <https://github.com/wradlib/wradlib/tree/master/wradlib/tests>`_ to get an idea. In addition, examples and docstrings are a good way to combine testing and documentation. Have a look at the `wradlib-notebooks <https://github.com/wradlib/wradlib-notebooks/tree/master/notebooks>`_ in order to get an idea on how to set these up correctly. In the docstrings, the ``Examples`` section will be tested by our testing framework. This could look like this::
 
-	def foo(a):
-		"""Docstring to be evaluated by doctest
+    def foo(a):
+        """Docstring to be evaluated by doctest
 
-		Examples
-		--------
-		>>> from wradlib.some_module import foo
-		>>> print(foo(3))
-		4
-		"""
-		return a + 1
+        Examples
+        --------
+        >>> from wradlib.some_module import foo
+        >>> print(foo(3))
+        4
+        """
+        return a + 1
 
 
 Continuous Integration
