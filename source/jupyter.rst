@@ -22,23 +22,23 @@ Otherwise, you need to make sure to
 
 Once these conditions are met, you can open a notebook: Launch a console or bash window in the directory that contains the example notebooks. If you installed :math:`\omega radlib` (e.g. via ``conda install wradlib``) into Anaconda's default (root) environment, you just need to execute::
 
-	> jupyter notebook
+    > jupyter notebook
 
 If you installed :math:`\omega radlib` into a conda environment (as recommended :doc:`here <gettingstarted>`),
 you need to activate that environment first. Let's say you named the environment `wradlib`::
 
-	> activate wradlib
-	> jupyter notebook
+    > activate wradlib
+    > jupyter notebook
 
 Did you forget the name of the environment that contains wradlib? This way, you get an overview over all environments::
 
-	> conda info --envs
+    > conda info --envs
 
 which will give you something like (example output under Windows)::
 
-	# conda environments
-	wradlib      C:\Anaconda2\envs\wradlib
-	root      *  C:\Anaconda2
+    # conda environments
+    wradlib      C:\Anaconda2\envs\wradlib
+    root      *  C:\Anaconda2
 
 In both cases, a browser window will open (typically at http://localhost:8888/tree) which will show the tree of the directory in which you started the jupyter notebook server. Just open any notebook by clicking. Code cells are executed by hitting ``Shift + Enter`` or by using the toolbar icons. It's pretty much self-explaining, and you'll soon get the hang of it.
 
@@ -62,7 +62,7 @@ Most notebooks use example data. These data are provided in a separate repositor
 
 **Under Linux**, you need to set the env variable in your current shell profile. In most cases, this will be loaded from ``~/.bashrc``. Open that file in an editor (e.g. via ``$EDITOR ~/.bashrc``) and add the following line at the end of the file::
 
-	export WRADLIB_DATA=/insert/full/path/to/wradlib-data/
+    export WRADLIB_DATA=/insert/full/path/to/wradlib-data/
 
 After this procedure, the example notebooks will automagically pull the required files from the data archive.
 
@@ -74,13 +74,13 @@ How to install jupyter?
 
 As already pointed out above, you can just look at the rendered notebooks :doc:`online docs <notebooks>`. In order to use them interactively, you need to install ``jupyter``. ``jupyter`` is shipped with `Anaconda's <https://www.anaconda.com/download/>`_ distribution by default. If you installed :math:`\omega radlib` in a separate *virtual environment* (as recommended :doc:`here <gettingstarted>`), you need to install ``jupyter`` in that virtual environment, too::
 
-	Under Windows:
-	> activate wradlib
-	[wradlib] > conda install jupyter
+    Under Windows:
+    > activate wradlib
+    [wradlib] > conda install jupyter
 
-	Under Linux/OSX:
-	$ source activate wradlib
-	[wradlib] $ conda install jupyter
+    Under Linux/OSX:
+    $ source activate wradlib
+    [wradlib] $ conda install jupyter
 
 If you are not sure which conda environments you have, you can check via ``conda info --envs``.
 
@@ -92,4 +92,4 @@ I prefer simple Python scripts instead of notebooks
 
 No problem. If you downloaded the notebooks directly from the wradlib repository, you can easily convert them to Python scripts yourself (but you need to :ref:`install jupyter <ref_get_jupyter>` to do the conversion)::
 
-	$ jupyter nbconvert --to script <name of the notebook>
+    $ jupyter nbconvert --to script <name of the notebook>
