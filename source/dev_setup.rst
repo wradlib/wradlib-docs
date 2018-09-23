@@ -33,7 +33,7 @@ Testing
 		>>> print(foo(3))
 		4
 		"""
-		return a + 1	   
+		return a + 1
 
 
 Continuous Integration
