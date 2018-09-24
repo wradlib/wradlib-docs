@@ -6,7 +6,7 @@ Getting Started
 Installation
 ------------
 
-In order to run :math:`\omega radlib`, you need to have a Python interpreter installed on your local computer, as well as a number of Python packages (`Dependencies`_). We recommend to install `Anaconda <https://www.anaconda.com/what-is-anaconda/>`_ as it installs Python, a number of required packages, and other useful tools (e.g. spyder).
+In order to run :math:`\omega radlib`, you need to have a Python interpreter installed on your local computer, as well as a number of Python packages (`Dependencies`_). We recommend installing `Anaconda <https://www.anaconda.com/what-is-anaconda/>`_ as it includes Python, numerous required packages, and other useful tools (e.g. `Spyder <https://www.spyder-ide.org/>`_).
 
 Using Anaconda the installation process is harmonised across platforms. Download and install the latest Anaconda distribution from https://www.anaconda.com/download/ for your specific OS. You might also consider the minimal `Miniconda <https://conda.io/miniconda.html>`_ if you do not want to install a full scientific python stack.
 
@@ -145,8 +145,8 @@ You can check whether the required `Dependencies`_ are available on your compute
 
 >>> import <package_name>
 ImportError: No module named <package_name>
- 
-This will be the response in case the package is not available. 
+
+This will be the response in case the package is not available.
 
 In case the import is successful, you should also check the version number:
 
