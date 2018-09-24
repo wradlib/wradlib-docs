@@ -1,0 +1,29 @@
+# Compiled Python files
+*.py[ocd]
+
+# gedit files
+*~
+
+# Notepad++ files
+nppBackup/
+
+# Git .orig files
+*.orig
+
+# Sphinx doc build dir
+_build/
+
+# Special dirs and files
+build/
+dist/
+bin/
+*.egg-info/
+Thumbs.db
+.DS_Store/
+.DS_Store
+.spyproject
+.idea/
+.cache
+*.tmp
+*.temp
+*.bak
