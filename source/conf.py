@@ -59,6 +59,8 @@ master_doc = 'index'
 # General information about the project.
 project = u'wradlib'
 copyright = u'2011-2018, wradlib developers'
+docs = subprocess.check_output(['git', 'rev-parse', 'HEAD']).decode().strip()
+url = 'https://github.com/wradlib'
 
 # check readthedocs
 on_rtd = os.environ.get('READTHEDOCS') == 'True'
@@ -81,20 +83,23 @@ if on_rtd:
         wradlib_notebooks_branch = rtd_version
         wradlib_branch_or_tag = rtd_version
 
-    repourl = 'https://github.com/wradlib/wradlib-notebooks.git'
+    repourl = '{0}/wradlib-notebooks.git'.format(url)
     reponame = 'wradlib-notebooks'
     # first remove any possible left overs
     subprocess.check_call(['rm', '-rf', 'wradlib-notebooks'])
     subprocess.check_call(['rm', '-rf', 'notebooks'])
     subprocess.check_call(['git', 'clone', '-b', wradlib_notebooks_branch,
                            repourl, reponame])
+    branch = 'origin/{}'.format(wradlib_branch_or_tag)
+    nb = subprocess.check_output(['git', '--git-dir=wradlib-notebooks/.git',
+                                  'rev-parse', branch]).decode().strip()
     subprocess.check_call(['mv', 'wradlib-notebooks/notebooks', '.'])
     subprocess.check_call(['rm', '-rf', 'wradlib-notebooks'])
 
     # install wradlib
     subprocess.check_call(['pip', 'install', '--no-deps', '--upgrade',
-                           "git+https://github.com/wradlib/wradlib.git@{}"
-                           "".format(wradlib_branch_or_tag)])
+                           "git+{0}/wradlib.git@{1}"
+                           "".format(url, wradlib_branch_or_tag)])
 
 # Mock most modules
 import sys
@@ -262,3 +267,17 @@ class WradlibStyle(Style):
 
 register_plugin('pybtex.style.labels', 'wrl', WradlibLabelStyle)
 register_plugin('pybtex.style.formatting', 'wrlstyle', WradlibStyle)
+
+file = open('index.rst', mode='r')
+index = file.read()
+file.close()
+
+longhash = wradlib.version.git_revision
+
+nb = ('`{0} <{1}/wradlib-notebooks/tree/{2}>`_'.format(nb[0:7], url, nb))
+docs = ('`{0} <{1}/wradlib-docs/tree/{2}>`_'.format(docs[0:7], url, docs))
+rel = ('`{0} <{1}/wradlib/tree/{2}>`_'.format(release, url, longhash))
+
+file = open('index.rst', mode='w')
+file.write(index.format(notebooks=nb, docs=docs, release=rel))
+file.close()
