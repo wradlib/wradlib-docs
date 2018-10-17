@@ -11,6 +11,7 @@ Library Reference
    ipol
    qual
    comp
+   classify
    clutter
    dp
    vpr
