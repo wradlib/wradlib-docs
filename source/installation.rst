@@ -1,16 +1,16 @@
-Getting Started
-===============
+Installation
+============
 
 .. _ref-installation:
 
-Installation
-------------
+Anaconda/Conda
+--------------
 
 In order to run :math:`\omega radlib`, you need to have a Python interpreter installed on your local computer, as well as a number of Python packages (`Dependencies`_). We recommend installing `Anaconda <https://www.anaconda.com/what-is-anaconda/>`_ as it includes Python, numerous required packages, and other useful tools (e.g. `Spyder <https://www.spyder-ide.org/>`_).
 
 Using Anaconda the installation process is harmonised across platforms. Download and install the latest Anaconda distribution from https://www.anaconda.com/download/ for your specific OS. You might also consider the minimal `Miniconda <https://conda.io/miniconda.html>`_ if you do not want to install a full scientific python stack.
 
-We are constantly performing tests with these distributions (for python versions 2.7, 3.5 and 3.6 respectively).
+We are constantly performing tests with these distributions (for python versions 2.7, 3.5, 3.6 and 3.7 respectively).
 
 If your Anaconda Python installation is working, the following command (in a console) should work::
 
@@ -87,7 +87,7 @@ Alternatively, you can install the `Bleeding edge code`_, but you have to keep t
 Bleeding edge code
 ------------------
 
-.. warning:: The :math:`\omega radlib` version on `PyPI <https://pypi.org/project/wradlib>`_ might lag behind the actual developments. You can use the bleeding edge code from the :math:`\omega radlib` `repository <https://github.com/wradlib/wradlib>`_. Note, however, that you need to make sure yourself that all `Dependencies`_ are met (see below).
+.. warning:: The :math:`\omega radlib` version on `PyPI <https://pypi.org/project/wradlib>`__ might lag behind the actual developments. You can use the bleeding edge code from the :math:`\omega radlib` `repository <https://github.com/wradlib/wradlib>`_. Note, however, that you need to make sure yourself that all `Dependencies`_ are met (see below).
 
 `Download <https://codeload.github.com/wradlib/wradlib/zip/master>`_ the source, unzip, and run::
 
@@ -97,9 +97,9 @@ Alternatively, you can add the :math:`\omega radlib` directory to your environme
 
 
 Installing via pip
----------------------------
+------------------
 
-Although we recommend using the Anaconda Python Environment you can install :math:`\omega radlib` from `PyPi <https://pypi.org/project/wradlib/>`_ via ``pip``.
+Although we recommend using the Anaconda Python Environment you can install :math:`\omega radlib` from `PyPi <https://pypi.org/project/wradlib/>`__ via ``pip``.
 
 Open a terminal and run::
 
@@ -191,15 +191,3 @@ We strongly recommend using the Anaconda conda package and environment manager (
 If you can't use Anaconda/Miniconda, it is generally a good idea to use your systems package manager to install dependencies. This will also take account for other needed bindings, libs etc.
 
 If you encounter problems installing :math:`\omega radlib`, check on your favorite search engine or create an issue `here <https://github.com/wradlib/wradlib/issues>`_ with details on the problem or send an email on the `wradlib-users <https://groups.google.com/forum/?fromgroups=#!forum/wradlib-users>`_ mailing list.
-
-
-Community
----------
-
-:math:`\omega radlib` is intended to be a community effort, and community needs communication.
-
-The key communication platform for :math:`\omega radlib` is the  `wradlib-users <https://groups.google.com/forum/?fromgroups=#!forum/wradlib-users>`_ mailing list and forum. Through this forum, you can help to improve :math:`\omega radlib` by reporting bugs, proposing enhancements, or by contributing code snippets (in any programming language) and documentation of algorithms.
-
-You can also ask other users and developers for help, or use your own knowledge and experience to help other users. We strongly encourage you to `subscribe <https://groups.google.com/forum/#!forum/wradlib-users/join>`_ to this list. Check it out!
-
-Learn more about :math:`\omega radlib` as a community effort :doc:`here <community>`!

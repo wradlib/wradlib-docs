@@ -1,6 +1,15 @@
 Community
 =========
 
+Users
+-----
+
+:math:`\omega radlib` is intended to be a community effort, and community needs communication.
+
+The key communication platform for :math:`\omega radlib` is the  `wradlib-users <https://groups.google.com/forum/?fromgroups=#!forum/wradlib-users>`_ mailing list and forum. Through this forum, you can help to improve :math:`\omega radlib` by reporting bugs, proposing enhancements, or by contributing code snippets (in any programming language) and documentation of algorithms.
+
+You can also ask other users and developers for help, or use your own knowledge and experience to help other users. We strongly encourage you to `subscribe <https://groups.google.com/forum/#!forum/wradlib-users/join>`_ to this list. Check it out!
+
 How to contribute to :math:`\omega radlib`?
 -------------------------------------------
 
@@ -17,11 +26,3 @@ However, **there is an even better way:** Start a `Pull Request <https://help.gi
 A step-by-step tutorial for a pull request can be found `here <https://guides.github.com/activities/forking/>`_.
 
 Finally, you are welcome to **contribute examples of your own** :math:`\boldsymbol \omega radlib` **applications** in our :doc:`recipes <notebooks/recipes>` section. There, you will also find a guide on how to submit your recipes to the :math:`\omega radlib` documentation pages.
-
-
-Users
------
-
-**Your feedback** will contribute to the future development of :math:`\omega radlib`! To provide feedback, use the `issues page <https://github.com/wradlib/wradlib/issues>`_ and `create an issue <https://github.com/wradlib/wradlib/issues/new>`_ (bug reports, suggestions, ...).
-
-We also encourage you to register to the mailing list `wradlib-users <https://groups.google.com/forum/#!forum/wradlib-users>`_. Using this mailing list or forum, you can ask other users and developers for help and help others, and we can notify you about the latest updates and developments.

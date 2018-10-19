@@ -4,7 +4,7 @@ How to use the tutorials and examples?
 Examples: your entry point to wradlib
 -------------------------------------
 
-The documentation of :math:`\omega radlib` basically consists of two elements: the first element is the :doc:`library reference <reference>` which provides a systematic documentation of each function in wradlib's API. In order to use the library reference properly, you should have an idea what you're actually looking for. This is why new users mostly start with the second element, the :doc:`tutorials and examples <notebooks>`. Here you can look for application examples that are close to what you actually want to achieve, and then use these as a basis for further development. Once you understood an example, you also know what to look for in the :doc:`library reference <reference>`.
+The documentation of :math:`\omega radlib` basically consists of two elements: the first element is the :doc:`library reference <reference>` which provides a systematic documentation of each function in wradlib's API. In order to use the library reference properly, you should have an idea what you're actually looking for. This is why new users mostly start with the second element, the `tutorials and examples <notebooks/overview.ipynb>`_. Here you can look for application examples that are close to what you actually want to achieve, and then use these as a basis for further development. Once you understood an example, you also know what to look for in the :doc:`library reference <reference>`.
 
 
 Interactive examples with jupyter notebooks
@@ -24,7 +24,7 @@ Once these conditions are met, you can open a notebook: Launch a console or bash
 
     > jupyter notebook
 
-If you installed :math:`\omega radlib` into a conda environment (as recommended :doc:`here <gettingstarted>`),
+If you installed :math:`\omega radlib` into a conda environment (as recommended :doc:`here <installation>`),
 you need to activate that environment first. Let's say you named the environment `wradlib`::
 
     > activate wradlib
@@ -72,7 +72,7 @@ After this procedure, the example notebooks will automagically pull the required
 How to install jupyter?
 -----------------------
 
-As already pointed out above, you can just look at the rendered notebooks :doc:`online docs <notebooks>`. In order to use them interactively, you need to install ``jupyter``. ``jupyter`` is shipped with `Anaconda's <https://www.anaconda.com/download/>`_ distribution by default. If you installed :math:`\omega radlib` in a separate *virtual environment* (as recommended :doc:`here <gettingstarted>`), you need to install ``jupyter`` in that virtual environment, too::
+As already pointed out above, you can just look at the rendered notebooks `online docs <notebooks/overview.ipynb>`_. In order to use them interactively, you need to install ``jupyter``. ``jupyter`` is shipped with `Anaconda's <https://www.anaconda.com/download/>`_ distribution by default. If you installed :math:`\omega radlib` in a separate *virtual environment* (as recommended :doc:`here <installation>`), you need to install ``jupyter`` in that virtual environment, too::
 
     Under Windows:
     > activate wradlib
