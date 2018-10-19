@@ -1,1 +1,0 @@
-.. automodule:: wradlib.vpr

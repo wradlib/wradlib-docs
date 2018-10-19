@@ -1,9 +1,9 @@
-For Developers
-==============
+Developer Guide
+===============
 
 Setup
 -----
-The section :doc:`gettingstarted` will provide you with detailed guidance on how to install :math:`\omega radlib` and the required dependencies for different operating systems (MS Windows, Linux, Mac OS). :math:`\omega radlib` |release| has been tested with the latest Anaconda Python on linux-64, osx-64 and MS Windows 32 and 64 versions.
+The section :doc:`installation` will provide you with detailed guidance on how to install :math:`\omega radlib` and the required dependencies for different operating systems (MS Windows, Linux, Mac OS). :math:`\omega radlib` |release| has been tested with the latest Anaconda Python on linux-64, osx-64 and MS Windows 32 and 64 versions.
 
 As a developer, though, you should rather link into :math:`\omega radlib`'s version control. This way, it will be easier for you to track changes and to contribute your changes to :math:`\omega radlib`'s main respository (see next section). Just install `Git <https://git-scm.com/>`_, then clone the :math:`\omega radlib` repository to your local system by executing the following command in your shell: ``git clone https://github.com/wradlib/wradlib.git``. Do not forget to set the ``PYTHONPATH`` to point to the corresponding directory.
 

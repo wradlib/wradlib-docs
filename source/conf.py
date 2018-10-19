@@ -42,12 +42,7 @@ extensions = ['nbsphinx',
 mathjax_path = ("https://cdn.mathjax.org/mathjax/latest/MathJax.js?"
                 "config=TeX-AMS-MML_HTMLorMML")
 
-# # get all rst files, do it manually
-rst_files = glob.glob('*.rst')
-autosummary_generate = rst_files
-autoclass_content = 'class'
-
-# # The suffix of source filenames.
+# The suffix of source filenames.
 # source_suffix = '.rst'
 
 # The encoding of source files.
@@ -65,24 +60,29 @@ url = 'https://github.com/wradlib'
 # check readthedocs
 on_rtd = os.environ.get('READTHEDOCS') == 'True'
 
+# processing on readthedocs
 if on_rtd:
-    # rtd_version will be either 'latest' or some tag name which should
-    # correspond to the wradlib and wradlib-docs tag
+    # rtd_version will be either 'latest', 'stable' or some tag name which
+    # should correspond to the wradlib and wradlib-docs tag
     rtd_version = os.environ.get('READTHEDOCS_VERSION', 'latest')
     print("RTD Version: {}".format(rtd_version))
+    # latest wradlib commit
     if rtd_version == 'latest':
         wradlib_notebooks_branch = 'devel'
         wradlib_branch_or_tag = 'master'
+    # latest tagged commit
     elif rtd_version == 'stable':
         tag = subprocess.check_output(['git', 'describe',
                                        '--abbrev=0', '--tags'],
                                       universal_newlines=True).strip()
         wradlib_notebooks_branch = tag
         wradlib_branch_or_tag = tag
+    # rely on rtd_version (wradlib-docs tag)
     else:
         wradlib_notebooks_branch = rtd_version
         wradlib_branch_or_tag = rtd_version
 
+    # clone wradlib-notebooks target branch
     repourl = '{0}/wradlib-notebooks.git'.format(url)
     reponame = 'wradlib-notebooks'
     # first remove any possible left overs
@@ -96,12 +96,22 @@ if on_rtd:
     subprocess.check_call(['mv', 'wradlib-notebooks/notebooks', '.'])
     subprocess.check_call(['rm', '-rf', 'wradlib-notebooks'])
 
-    # install wradlib
+    # correct notebook doc-links
+    if rtd_version is not 'latest':
+        baseurl = 'https://docs.wradlib.org/en/{}'
+        search = baseurl.format('latest')
+        replace = baseurl.format(rtd_version)
+        subprocess.check_call(["find notebooks -type f -name '*.ipynb' -exec "
+                               "sed -i 's%{search}%{replace}%g' {{}} +"
+                               "".format(search=search, replace=replace)],
+                              shell=True)
+
+    # install wradlib target branch/tag
     subprocess.check_call(['pip', 'install', '--no-deps', '--upgrade',
                            "git+{0}/wradlib.git@{1}"
                            "".format(url, wradlib_branch_or_tag)])
 
-# Mock most modules
+# Mock modules
 import sys
 from unittest.mock import MagicMock
 
@@ -132,6 +142,36 @@ sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
 # get wradlib version
 import wradlib  # noqa
+
+# get wradlib modules and create automodule rst-files
+import types
+modules = []
+for k, v in wradlib.__dict__.items():
+    if type(v) is types.ModuleType:
+        if not k in ['_warnings', 'version']:
+            modules.append(k)
+            file = open('{0}.rst'.format(k), mode='w')
+            file.write('.. automodule:: wradlib.{}\n'.format(k))
+            file.close()
+
+# create API/Library reference rst-file
+reference = """Library Reference
+=================
+
+.. toctree::
+   :maxdepth: 1
+"""
+
+file = open('reference.rst', mode='w')
+file.write('{}\n'.format(reference))
+for mod in sorted(modules):
+    file.write('   {}\n'.format(mod))
+file.close()
+
+# get all rst files, do it manually
+rst_files = glob.glob('*.rst')
+autosummary_generate = rst_files
+autoclass_content = 'class'
 
 # The full version, including alpha/beta/rc tags.
 version = wradlib.__version__
@@ -207,11 +247,11 @@ templates_path = ['_templates']
 html_show_copyright = True
 
 intersphinx_mapping = {
-    'python': ('https://docs.python.org/', None),
+    'python': ('https://docs.python.org/3/', None),
     'numpy': ('https://docs.scipy.org/doc/numpy/', None),
     'scipy': ('https://docs.scipy.org/doc/scipy/reference/', None),
     'matplotlib': ('https://matplotlib.org/', None),
-    'sphinx': ('http://sphinx-doc.org', None),
+    'sphinx': ('http://www.sphinx-doc.org/en/master/', None),
 }
 
 # -- Napoleon settings for docstring processing -------------------------------
@@ -268,13 +308,17 @@ class WradlibStyle(Style):
 register_plugin('pybtex.style.labels', 'wrl', WradlibLabelStyle)
 register_plugin('pybtex.style.formatting', 'wrlstyle', WradlibStyle)
 
+# adapt index.rst
 file = open('index.rst', mode='r')
 index = file.read()
 file.close()
 
 longhash = wradlib.version.git_revision
+try:
+    nb = ('`{0} <{1}/wradlib-notebooks/tree/{2}>`_'.format(nb[0:7], url, nb))
+except NameError:
+    nb = 'Missing'
 
-nb = ('`{0} <{1}/wradlib-notebooks/tree/{2}>`_'.format(nb[0:7], url, nb))
 docs = ('`{0} <{1}/wradlib-docs/tree/{2}>`_'.format(docs[0:7], url, docs))
 rel = ('`{0} <{1}/wradlib/tree/{2}>`_'.format(release, url, longhash))
 

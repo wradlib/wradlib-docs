@@ -27,12 +27,11 @@ This documentation is under steady development. It provides a complete library r
 .. toctree::
    :maxdepth: 2
 
-   gettingstarted
-   notebooks
+   installation
+   user_guide
+   notebooks/overview.ipynb
    reference
-   community
-   dev_setup
-   docker
+   dev_guide
    zreferences
    release_notes
 
