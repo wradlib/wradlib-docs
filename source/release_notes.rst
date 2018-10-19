@@ -11,6 +11,30 @@ Bleeding Edge
 
 *Nothing, so far*
 
+Version 1.2.0
+-------------
+
+**Highlights**
+
+* significantly speed up functions using interpolation classes
+* add `classify` module including 2d membershipfunctions hydrometeor classification
+* fix conformance, correctness and consistency issues in wradlib-docs (thanks `@CAM-Gerlach <https://github.com/CAM-Gerlach>`_)
+
+**New features**
+
+* add new header token `VR` and `U` to radolan header parser
+* add `load_vector`-method to `zonaldata.DataSource`
+* enable `zonaldata.ZonaldataBase` to take `DataSource` objects as parameters
+* add `get_radiosonde` to `io.misc` to retrieve radiosonde data from internet
+* add `minalt` keyword argument to `vpr.make_3d_grid`
+
+**Bugfixes**
+
+* update links, fix typos, improve CI workflow
+* fix bug in all adjustment classes when checking for None
+* show angle axis curvelinear grid again
+* align docstring with actual code and use `sweep` in iris-reader
+
 Version 1.1.0
 -------------
 
