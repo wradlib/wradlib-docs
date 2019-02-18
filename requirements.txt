@@ -6,3 +6,4 @@ sphinxcontrib-bibtex
 deprecation
 nbsphinx
 xmltodict
+semver

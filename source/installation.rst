@@ -10,12 +10,12 @@ In order to run :math:`\omega radlib`, you need to have a Python interpreter ins
 
 Using Anaconda the installation process is harmonised across platforms. Download and install the latest Anaconda distribution from https://www.anaconda.com/download/ for your specific OS. You might also consider the minimal `Miniconda <https://conda.io/miniconda.html>`_ if you do not want to install a full scientific python stack.
 
-We are constantly performing tests with these distributions (for python versions 2.7, 3.5, 3.6 and 3.7 respectively).
+We are constantly performing tests with these distributions (for python versions 3.6 and 3.7 respectively).
 
 If your Anaconda Python installation is working, the following command (in a console) should work::
 
     $ python --version
-    Python 3.5.1 :: Continuum Analytics, Inc.
+    Python 3.7.1 :: Continuum Analytics, Inc.
 
 Now you can use the ``conda`` package and environment manager (`conda documentation <https://conda.io/docs/>`_) to setup your :math:`\omega radlib` installation.
 
@@ -25,56 +25,30 @@ Now you can use the ``conda`` package and environment manager (`conda documentat
 
 #. Create a new environment from scratch::
 
-    $ conda create --name wradlib python=3.6
+    $ conda create --name wradlib python=3.7
 
-#. Activate the :math:`\omega radlib` environment
+#. Activate the :math:`\omega radlib` environment::
 
-    Linux::
-
-        $ source activate wradlib
-
-    Windows::
-
-        > activate wradlib
+    $ conda activate wradlib
 
 #. Install :math:`\omega radlib` and its dependencies::
 
     (wradlib) $ conda install wradlib
-
-#. Make sure the GDAL_DATA environment variable (needed for georeferencing) is set within your environment.
-
-    Linux/OSX::
-
-        (wradlib) $ echo $GDAL_DATA
-
-    Windows CMD.exe::
-
-        [wradlib] > echo %GDAL_DATA%
-
-#. If not, you can set it like this:
-
-    Linux/OSX::
-
-        (wradlib) $ export GDAL_DATA=/path/to/anaconda/envs/wradlib/share/gdal
-
-    Windows CMD.exe::
-
-        [wradlib] > setx GDAL_DATA C:\path\to\anaconda\envs\wradlib\Library\share\gdal
 
 Now you have a ``conda`` environment with a working :math:`\omega radlib` installation.
 
 Test the integrity of your :math:`\omega radlib` installation by opening a console window and typing calling the python interpreter::
 
     $ python
-    Python 3.6.2 | packaged by conda-forge | (default, Jul 23 2017, 22:59:30)
-    [GCC 4.8.2 20140120 (Red Hat 4.8.2-15)] on linux
+    Python 3.7.1 | packaged by conda-forge | (default, Nov 13 2018, 18:33:04)
+    [GCC 7.3.0] :: Anaconda, Inc. on linux
     Type "help", "copyright", "credits" or "license" for more information.
 
 The Python prompt should appear. Then type::
 
     >>> import wradlib
     >>> wradlib.__version__
-    '1.0.0'
+    '1.2.1'
 
 If everything is ok, this will show the running :math:`\omega radlib` version. If the :math:`\omega radlib` package is not found by the interpreter, you will get::
 
@@ -123,22 +97,26 @@ Dependencies
 
 :math:`\omega radlib` was not designed to be a self-contained library. Besides extensive use of Numpy and Scipy, :math:`\omega radlib` uses additional libraries, which you will need to install before you can use :math:`\omega radlib`.
 
-.. tabularcolumns:: |L|L|L|]
+.. tabularcolumns:: |L|L|L|
 
 +------------+-----------+-------------+
 | Package    |    min    | recommended |
 +============+===========+=============+
-| numpy      | >= 1.6.1  | >= 1.14.0   |
+| numpy      | >= 1.9    | >= 1.16.0   |
 +------------+-----------+-------------+
-| matplotlib | >= 1.5.1  | >= 2.1.0    |
+| matplotlib | >= 2      | >= 3.0.2    |
 +------------+-----------+-------------+
-| scipy      | >= 0.9    | >= 1.0.0    |
+| scipy      | >= 0.9    | >= 1.2.0    |
 +------------+-----------+-------------+
-| h5py       | >= 2.0.1  | >= 2.7.0    |
+| h5py       | >= 2.0.1  | >= 2.9.0    |
 +------------+-----------+-------------+
-| netCDF4    | >= 1.0    | >= 1.3.0    |
+| netCDF4    | >= 1.0    | >= 1.4.2    |
 +------------+-----------+-------------+
-| gdal       | >= 1.9    | >= 2.2.0    |
+| xarray     | >= 0.1    | >= 0.11.3   |
++------------+-----------+-------------+
+| xmltodict  | >= 0.11   | >= 0.11.0   |
++------------+-----------+-------------+
+| gdal       | >= 1.9    | >= 2.4.0    |
 +------------+-----------+-------------+
 
 You can check whether the required `Dependencies`_ are available on your computer by opening a Python console and enter:
@@ -171,13 +149,6 @@ In order to build the speedup module as a shared library, you need to use f2py (
     $ f2py.py -c -m speedup speedup.f
 
 Now the speedup module should be available.
-
-**xmltodict**
-
-We use xmltodict to convert the Rainbow Data Files (which have a metadata XML header) to an ordered dict. It is easily installed with ``pip``::
-
-    $ pip install xmltodict
-
 
 .. _ref-knownissues:
 

@@ -12,6 +12,7 @@ dependencies:
   - deprecation
   - git
   - nbsphinx
+  - semver
  # - scipy
  # - matplotlib
  # - h5py
