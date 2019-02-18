@@ -9,7 +9,9 @@ You can install the latest :math:`\omega radlib` release from PyPI via ``$ pip i
 Bleeding Edge
 -------------
 
-*Nothing, so far*
+**Highlights**
+
+* added xarray-powered reader/writer for Cf/Radial and ODIM_H5
 
 Version 1.2.0
 -------------
