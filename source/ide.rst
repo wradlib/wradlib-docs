@@ -1,5 +1,5 @@
-Integrated Development Environments for Python
-==============================================
+IDEs for Python
+===============
 
 Development Environments vs. Notebooks
 --------------------------------------

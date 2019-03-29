@@ -5,13 +5,31 @@ Please note that :math:`\omega radlib` releases follow `semantic versioning <htt
 
 You can install the latest :math:`\omega radlib` release from PyPI via ``$ pip install wradlib`` or specific version via ``$ pip install wradlib==x.y.z``. The recommended installation process is described in :doc:`installation`.
 
-
 Bleeding Edge
+-------------
+
+Nothing, so far.
+
+Version 1.3.0
 -------------
 
 **Highlights**
 
-* added xarray-powered reader/writer for Cf/Radial and ODIM_H5
+* wradlib is considered Python3 only working with Python >= 3.6
+* xarray-powered reader/writer for Cf/Radial 1.X and 2.0 as well as ODIM_H5
+* xarray-powered plotting using DataArray via xarray-DataArray Accessor
+
+**New features**
+
+* creation of xarray DataArray from spherical coordinates and radar data
+* update test machinery to use pytest (mainly CI use)
+* correctly apply `semver`
+
+**Bugfixes**
+
+* beamblockage calculation, precisely detect clear or blocked beam
+* catch HTTPError in `test_radiosonde`, graceful skip test
+* `spherical_to_xyz` better aligns with input dimensions
 
 Version 1.2.0
 -------------

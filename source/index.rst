@@ -11,7 +11,7 @@ wradlib: An Open Source Library for Weather Radar Data Processing
 :notebooks: {notebooks}
 :docs: {docs}
 
-The :math:`\omega radlib` project has been initiated in order facilitate the use of weather radar data as well as to provide a common platform for research on new algorithms. :math:`\omega radlib` is an open source library which is well documented and easy to use. It is written in the free programming language `Python <https://www.python.org>`_.
+The :math:`\omega radlib` project has been initiated in order facilitate the use of weather radar data as well as to provide a common platform for research on new algorithms. :math:`\omega radlib` is an open source library which is well documented and easy to use. It is written in the free programming language `Python <https://www.python.org>`_. As of version 1.3 :math:`\omega radlib` is Python 3 only.
 
 .. note:: Please cite :math:`\omega radlib` as *Heistermann, M., Jacobi, S., and Pfaff, T.: Technical Note: An open source library for processing weather radar data (wradlib), Hydrol. Earth Syst. Sci., 17, 863-871,* doi:`10.5194/hess-17-863-2013, 2013 <https://www.hydrol-earth-syst-sci.net/17/863/2013/hess-17-863-2013.pdf>`_
 
@@ -24,21 +24,81 @@ with high spatio-temporal resolution over large areas makes it an invaluable too
 
 This documentation is under steady development. It provides a complete library reference as well as a set of tutorials which will get you started in working with :math:`\omega radlib`.
 
+Documentation
+-------------
+
+**Installation**
+
+* :doc:`installation`
+* :doc:`docker`
+* :doc:`ide`
+
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
+   :hidden:
+   :caption: Getting started
 
    installation
+   docker
+   ide
+
+**User Guide**
+
+* :doc:`user_guide`
+* :doc:`notebooks/fileio`
+* :doc:`Attenuation Correction <notebooks/attenuation/wradlib_attenuation>`
+* :doc:`Echo Classification <notebooks/classify>`
+* :doc:`notebooks/georeferencing`
+* :doc:`plotting`
+* :doc:`Interpolation <notebooks/interpolation/wradlib_ipol_example>`
+* :doc:`Rainfall Adjustment <notebooks/multisensor/wradlib_adjust_example>`
+* :doc:`notebooks/zonalstats/wradlib_zonalstats_classes`
+* :doc:`specials`
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+   :caption: Tutorials & examples
+
    user_guide
-   notebooks/overview.ipynb
+   notebooks/fileio
+   Attenuation Correction <notebooks/attenuation/wradlib_attenuation>
+   Echo Classification <notebooks/classify>
+   notebooks/georeferencing
+   plotting
+   Interpolation <notebooks/interpolation/wradlib_ipol_example>
+   Rainfall Adjustment <notebooks/multisensor/wradlib_adjust_example>
+   notebooks/zonalstats/wradlib_zonalstats_classes
+   specials
+
+**Help & reference**
+
+* :doc:`reference`
+* :doc:`community`
+* :doc:`dev_guide`
+* :doc:`zreferences`
+* :doc:`release_notes`
+
+.. toctree::
+   :maxdepth: 1
+   :hidden:
+   :caption: Help & reference
+
    reference
+   community
    dev_guide
    zreferences
    release_notes
 
+License
+-------
+
+wradlib is available under the open source `MIT License`__.
+
+__ https://opensource.org/licenses/MIT
+
 Indices and tables
-==================
+------------------
 
 * :ref:`genindex`
 * :ref:`modindex`
-* :ref:`search`
-

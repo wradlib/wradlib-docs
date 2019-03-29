@@ -138,7 +138,7 @@ MOCK_MODULES = ['scipy', 'scipy.spatial', 'scipy.stats',
                 'mpl_toolkits.axisartist.angle_helper',
                 'h5py',
                 'netCDF4', 'osgeo',
-                'xarray']
+                'cartopy']
 sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
 
 # get wradlib version

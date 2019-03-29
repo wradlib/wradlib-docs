@@ -1,10 +1,9 @@
-User Guide
-==========
+Introduction
+============
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    jupyter.rst
-   ide.rst
-   docker.rst
-   community.rst
+   notebooks/learnpython
+   notebooks/basics
