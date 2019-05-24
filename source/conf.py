@@ -107,9 +107,19 @@ if on_rtd:
                               shell=True)
 
     # install wradlib target branch/tag
-    subprocess.check_call(['pip', 'install', '--no-deps', '--upgrade',
-                           "git+{0}/wradlib.git@{1}"
-                           "".format(url, wradlib_branch_or_tag)])
+    # temporary hack for rtd
+    subprocess.check_call(['rm', '-rf', 'wradlib'])
+    repourl = '{0}/wradlib.git'.format(url)
+    reponame = 'wradlib'
+    subprocess.check_call(['git', 'clone', '-b', wradlib_branch_or_tag,
+                           repourl])
+    # subprocess.check_call(['pip', 'install', '--no-deps', '--upgrade',
+    #                       "git+{0}/wradlib.git@{1}"
+    #                       "".format(url, wradlib_branch_or_tag)])
+    curpath = os.getcwd()
+    os.chdir(os.path.join(curpath, 'wradlib'))
+    subprocess.check_call(['python', 'setup.py', 'install'])
+    os.chdir(curpath)
 
 # Mock modules
 import sys
