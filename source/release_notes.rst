@@ -10,6 +10,29 @@ Bleeding Edge
 
 Nothing, so far.
 
+Version 1.4.0
+-------------
+
+**Highlights**
+
+* read sigmet/iris ingest files, redesign of sigmet reader (suggested by `@aschueth <https://github.com/aschueth>`_)
+* enhance/rewrite fuzzy echo classifier (implemented with `@overeem11 <https://github.com/overeem11>`_)
+
+**New features**
+
+* parametrize xarray based OdimH5-reader (suggested by `@egouden <https://github.com/egouden>`_)
+* add depolarization ratio calculation (implemented by `@overeem11 <https://github.com/overeem11>`_)
+* add script for test profiling (added by `@egouden <https://github.com/egouden>`_)
+
+**Bugfixes**
+
+* remove unnecessary seek in radolan-reader (suggested by `@PPazderski <https://github.com/PPazderski>`_)
+* correct handling of edge cases in `dp.texture` processing (spotted by `@overeem11 <https://github.com/overeem11>`_)
+* correct decoding of DB_FLIQUID2 (sigmet-reader) (implemented by `@ckaradavut <https://github.com/ckaradavut>`_)
+* correct handling of non-precip in 2D hmc (spotted by and fixed with `@bzohidov <https://github.com/bzohidov>`_)
+* fix semver handling and install process (suggested by `@s-m-e <https://github.com/s-m-e>`_)
+* fix import for MutableMapping (added by `@zssherman <https://github.com/zssherman>`_)
+
 Version 1.3.0
 -------------
 

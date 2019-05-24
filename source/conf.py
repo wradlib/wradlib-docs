@@ -172,7 +172,7 @@ file.close()
 # get all rst files, do it manually
 rst_files = glob.glob('*.rst')
 autosummary_generate = rst_files
-autoclass_content = 'class'
+autoclass_content = 'both'
 
 # The full version, including alpha/beta/rc tags.
 version = wradlib.__version__

@@ -15,13 +15,17 @@ We are constantly performing tests with these distributions (for python versions
 If your Anaconda Python installation is working, the following command (in a console) should work::
 
     $ python --version
-    Python 3.7.1 :: Continuum Analytics, Inc.
+    Python 3.7.3 :: Continuum Analytics, Inc.
 
 Now you can use the ``conda`` package and environment manager (`conda documentation <https://conda.io/docs/>`_) to setup your :math:`\omega radlib` installation.
 
 #. Add the conda-forge channel, where :math:`\omega radlib` and its dependencies are located. Read more about the community effort `conda-forge <https://conda-forge.org/>`_::
 
     $ conda config --add channels conda-forge
+
+#. Use strict channel priority to prevent channel clashes::
+
+    $ conda config --set channel_priority strict
 
 #. Create a new environment from scratch::
 
@@ -40,7 +44,7 @@ Now you have a ``conda`` environment with a working :math:`\omega radlib` instal
 Test the integrity of your :math:`\omega radlib` installation by opening a console window and typing calling the python interpreter::
 
     $ python
-    Python 3.7.1 | packaged by conda-forge | (default, Nov 13 2018, 18:33:04)
+    Python 3.7.3 | packaged by conda-forge | (default, Mar 27 2019, 23:01:00)
     [GCC 7.3.0] :: Anaconda, Inc. on linux
     Type "help", "copyright", "credits" or "license" for more information.
 
@@ -48,7 +52,7 @@ The Python prompt should appear. Then type::
 
     >>> import wradlib
     >>> wradlib.__version__
-    '1.2.1'
+    '1.4.0'
 
 If everything is ok, this will show the running :math:`\omega radlib` version. If the :math:`\omega radlib` package is not found by the interpreter, you will get::
 
