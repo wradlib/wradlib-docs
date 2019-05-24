@@ -118,7 +118,7 @@ if on_rtd:
     #                       "".format(url, wradlib_branch_or_tag)])
     curpath = os.getcwd()
     os.chdir(os.path.join(curpath, 'wradlib'))
-    subprocess.check_call(['python', 'setup.py', 'install'])
+    subprocess.check_call(['python', 'setup.py', 'develop', '--no-deps'])
     os.chdir(curpath)
 
 # Mock modules
