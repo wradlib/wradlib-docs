@@ -10,6 +10,28 @@ Bleeding Edge
 
 Nothing, so far.
 
+Version 1.5.0
+-------------
+
+**Highlights**
+
+* consolidation of xarray based functionality, bugfixing, feature adding
+* speedup zonal statistics by using `/vsimem`, by creation of spatial and attribute index files as well as by faster reading of attributes and properties
+
+**New features**
+
+* make OdimH5 reader accept list of files and merge into one structure
+* make `chunks` available for transparently use dask with OdimH5 and CfRadial readers
+* make gdal3 compatible (added by `@egouden <https://github.com/egouden>`_)
+* use `loaddata='xarray'` kwargs to output data as Xarray Dataset in `read_radolan_composite`
+* CI: add Appveyor to run test-suite under Windows OS
+
+**Bugfixes**
+
+* use `importlib` in `import_optional`, correct multidimensional calling in `gradient_along_axis`
+* several fixes for OdimH5 and Cf/Radial readers/writers
+* set destination projection to destination dataset in `reproject_raster_dataset` (spotted by `wradlib-forum <https://groups.google.com/forum/#!msg/wradlib-users/-dvRhDCjgV0/X0JR4yL3BgAJ>`_)
+
 Version 1.4.0
 -------------
 
