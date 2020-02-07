@@ -97,7 +97,7 @@ if on_rtd:
     subprocess.check_call(['rm', '-rf', 'wradlib-notebooks'])
 
     # correct notebook doc-links
-    if rtd_version is not 'latest':
+    if rtd_version != 'latest':
         baseurl = 'https://docs.wradlib.org/en/{}'
         search = baseurl.format('latest')
         replace = baseurl.format(rtd_version)
@@ -136,7 +136,7 @@ MOCK_MODULES = ['scipy', 'scipy.spatial', 'scipy.stats',
                 'mpl_toolkits.axisartist',
                 'mpl_toolkits.axisartist.grid_finder',
                 'mpl_toolkits.axisartist.angle_helper',
-                'h5py',
+                'h5py', 'h5netcdf',
                 'netCDF4', 'osgeo',
                 'cartopy']
 sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
