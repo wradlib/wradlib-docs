@@ -31,13 +31,19 @@ import subprocess
 extensions = ['nbsphinx',
               'sphinx.ext.autodoc',
               'sphinx.ext.autosummary',
-              'sphinx.ext.napoleon',
-              'sphinx.ext.todo',
               'sphinx.ext.coverage',
-              'sphinx.ext.mathjax',
+              "sphinx.ext.extlinks",
               'sphinx.ext.intersphinx',
+              'sphinx.ext.napoleon',
+              'sphinx.ext.mathjax',
+              'sphinx.ext.todo',
               'sphinxcontrib.bibtex',
               ]
+
+extlinks = {
+    "issue": ("https://github.com/wradlib/wradlib/issues/%s", "GH"),
+    "pull": ("https://github.com/wradlib/wradlib/pull/%s", "PR"),
+}
 
 mathjax_path = ("https://cdn.mathjax.org/mathjax/latest/MathJax.js?"
                 "config=TeX-AMS-MML_HTMLorMML")
@@ -53,7 +59,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'wradlib'
-copyright = u'2011-2018, wradlib developers'
+copyright = u'2011-2020, wradlib developers'
 docs = subprocess.check_output(['git', 'rev-parse', 'HEAD']).decode().strip()
 url = 'https://github.com/wradlib'
 

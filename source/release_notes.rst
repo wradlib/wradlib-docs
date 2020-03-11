@@ -5,10 +5,37 @@ Please note that :math:`\omega radlib` releases follow `semantic versioning <htt
 
 You can install the latest :math:`\omega radlib` release from PyPI via ``$ pip install wradlib`` or specific version via ``$ pip install wradlib==x.y.z``. The recommended installation process is described in :doc:`installation`.
 
-Bleeding Edge
+Version 1.6.0
 -------------
 
-Nothing, so far.
+**Highlights**
+
+* improvements of georef.raster module (:pull:`376`) by `@egouden <https://github.com/egouden>`_
+* implement multi-file ODIMH5-reader/writer (:pull:`397`, :pull:`409` and :pull:`410`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_ and `@egouden <https://github.com/egouden>`_
+* simplify `zr`-module, add handling of multidimensional arrays (:pull:`408`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* use __all__ in submodules (georef, io) to specify exported/documented functions (:gh:`386`, :pull:`388`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**New features**
+
+* add STATUS product to Iris/Sigmet reader (:pull:`378`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* improvements of georef.raster module (:pull:`376`) by `@egouden <https://github.com/egouden>`_
+* add PRF and NSAMPLES to ODIM reader (:pull:`393`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* refactor code into `assign_root`-function (:pull:`393`) by `@egouden <https://github.com/egouden>`_
+* add ODIM WRAD moment (:pull:`406`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**Bugfixes**
+
+* apply correct decoding of VEL, WIDTH and KDP IrisCartesianProductFile (:pull:`378`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* add missing `requests` dependency to CI (:pull:`374`) by `@s-m-e <https://github.com/s-m-e>`_
+* correct error in documentation of sweep_centroids (:pull:`383`) by `@ElmerJeanpierreLopez <https://github.com/ElmerJeanpierreLopez>`_
+* adapt `georef.polar.sweep_centroids` to only use angles in degrees (:pull:`385`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* work around issue, where ODIM `startime` == `endtime` (:pull:`391`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* improve handling of equal sized dimensions (:pull:`393`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* use xarray `Dataset.drop_vars` instead of deprecated `Dataset.drop` (:pull:`398`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* use xarray.Dataset.rename instead of rename_dims (:pull:`402`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* add missing `+`-sign in projection string (:pull:`405`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* fix filter_cloudtype (low cloud switch removes everything) (:pull:`401`) by `@egouden <https://github.com/egouden>`_
+* use Dataset.swap_dims instead of rename (:pull:`406`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
 
 Version 1.5.0
 -------------
