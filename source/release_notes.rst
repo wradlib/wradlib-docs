@@ -5,6 +5,11 @@ Please note that :math:`\omega radlib` releases follow `semantic versioning <htt
 
 You can install the latest :math:`\omega radlib` release from PyPI via ``$ pip install wradlib`` or specific version via ``$ pip install wradlib==x.y.z``. The recommended installation process is described in :doc:`installation`.
 
+Bleeding Edge
+-------------
+
+Nothing, so far.
+
 Version 1.6.0
 -------------
 
