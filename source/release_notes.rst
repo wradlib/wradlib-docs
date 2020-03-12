@@ -18,7 +18,7 @@ Version 1.6.0
 * improvements of georef.raster module (:pull:`376`) by `@egouden <https://github.com/egouden>`_
 * implement multi-file ODIMH5-reader/writer (:pull:`397`, :pull:`409` and :pull:`410`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_ and `@egouden <https://github.com/egouden>`_
 * simplify `zr`-module, add handling of multidimensional arrays (:pull:`408`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
-* use __all__ in submodules (georef, io) to specify exported/documented functions (:gh:`386`, :pull:`388`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* use __all__ in submodules (georef, io) to specify exported/documented functions (:issue:`386`, :pull:`388`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
 
 **New features**
 
