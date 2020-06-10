@@ -57,7 +57,7 @@ Documentation
 * :doc:`plotting`
 * :doc:`Interpolation <notebooks/interpolation/wradlib_ipol_example>`
 * :doc:`Rainfall Adjustment <notebooks/multisensor/wradlib_adjust_example>`
-* :doc:`notebooks/zonalstats/wradlib_zonalstats_classes`
+* :doc:`zonalstatistics`
 * :doc:`specials`
 
 .. toctree::
@@ -73,7 +73,7 @@ Documentation
    plotting
    Interpolation <notebooks/interpolation/wradlib_ipol_example>
    Rainfall Adjustment <notebooks/multisensor/wradlib_adjust_example>
-   notebooks/zonalstats/wradlib_zonalstats_classes
+   zonalstatistics
    specials
 
 **Help & reference**

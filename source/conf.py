@@ -195,7 +195,7 @@ today_fmt = '%Y-%m-%d'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # exclude_patterns = []
-exclude_patterns = ['_build', '**.ipynb_checkpoints']
+exclude_patterns = ['_build', '**.ipynb_checkpoints', 'notebooks/overview.ipynb']
 
 # -- nbsphinx specifics --
 # do not execute notebooks ever while building docs

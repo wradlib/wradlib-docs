@@ -1,3 +1,5 @@
+.. currentmodule:: wradlib
+
 Release Notes
 =============
 
@@ -9,6 +11,39 @@ Bleeding Edge
 -------------
 
 Nothing, so far.
+
+Version 1.7.0
+-------------
+
+**Highlights**
+
+* implement generalized :py:func:`util.derivate` function with improved NaN-handling (:pull:`419`, :pull:`423`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* complete rework of phidp/kdp estimation code (Vulpiani) including new keyword-parameters, handling of ndimensional arrays,
+  using ``scipy.integrate.cumtrapz`` instead of ``np.cumsum`` (:pull:`412`, :pull:`422`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* new interpolators on regular grids (:pull:`390`, :pull:`429`, :pull:`430`) by `@egouden <https://github.com/egouden>`_ and `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**New features**
+
+* reimplement `dp.linear_despeckle` as :py:func:`util.despeckle` (:pull:`420`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* read RHI in ODIM reader (:pull:`424`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* new :py:func:`.get_earth_projection` and :py:func:`.get_radar_projection` functions (:pull:`379`) by `@egouden <https://github.com/egouden>`_
+* new convenience functions :py:func:`.set_raster_indexing` and :py:func:`.set_coordinate_indexing` (:pull:`429`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* implement rainrate decoder to iris reader (:pull:`428`) by `@tsmsalper <https://github.com/tsmsalper>`_
+
+**Bugfixes**
+
+* correct padding and nan-filling for multidimensional arrays in ``dp.texture`` (:pull:`418`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* introduce ``call_kwargs`` in :py:func:`comp.togrid` (:issue:`373`) reported by `@jorahu <https://github.com/jorahu>`_  (:pull:`425`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+Version 1.6.2
+-------------
+
+* re-add removed IRIS features (:issue:`415`, :pull:`416`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+Version 1.6.1
+-------------
+
+* use LooseVersion to check for dependency matching (:issue:`413`, :pull:`414`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
 
 Version 1.6.0
 -------------
