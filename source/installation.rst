@@ -10,7 +10,7 @@ In order to run :math:`\omega radlib`, you need to have a Python interpreter ins
 
 Using Anaconda the installation process is harmonised across platforms. Download and install the latest Anaconda distribution from https://www.anaconda.com/download/ for your specific OS. You might also consider the minimal `Miniconda <https://conda.io/miniconda.html>`_ if you do not want to install a full scientific python stack.
 
-We are constantly performing tests with these distributions (for python versions 3.6 and 3.7 respectively).
+We are constantly performing tests with these distributions (for python versions 3.6, 3.7 and 3.8 respectively).
 
 If your Anaconda Python installation is working, the following command (in a console) should work::
 
@@ -29,7 +29,7 @@ Now you can use the ``conda`` package and environment manager (`conda documentat
 
 #. Create a new environment from scratch::
 
-    $ conda create --name wradlib python=3.7
+    $ conda create --name wradlib python=3.8
 
 #. Activate the :math:`\omega radlib` environment::
 
@@ -44,15 +44,15 @@ Now you have a ``conda`` environment with a working :math:`\omega radlib` instal
 Test the integrity of your :math:`\omega radlib` installation by opening a console window and typing calling the python interpreter::
 
     $ python
-    Python 3.7.3 | packaged by conda-forge | (default, Mar 27 2019, 23:01:00)
-    [GCC 7.3.0] :: Anaconda, Inc. on linux
+    Python 3.7.8 | packaged by conda-forge | (default, Jul 31 2020, 02:25:08)
+    [GCC 7.5.0] on linux
     Type "help", "copyright", "credits" or "license" for more information.
 
 The Python prompt should appear. Then type::
 
     >>> import wradlib
     >>> wradlib.__version__
-    '1.4.0'
+    '1.8.0'
 
 If everything is ok, this will show the running :math:`\omega radlib` version. If the :math:`\omega radlib` package is not found by the interpreter, you will get::
 
@@ -106,21 +106,23 @@ Dependencies
 +------------+-----------+-------------+
 | Package    |    min    | recommended |
 +============+===========+=============+
-| numpy      | >= 1.9    | >= 1.16.0   |
+| numpy      | >= 1.9    | >= 1.19.0   |
 +------------+-----------+-------------+
-| matplotlib | >= 2      | >= 3.0.2    |
+| matplotlib | >= 3      | >= 3.3.0    |
 +------------+-----------+-------------+
-| scipy      | >= 0.9    | >= 1.2.0    |
+| scipy      | >= 1.0    | >= 1.5.0    |
 +------------+-----------+-------------+
-| h5py       | >= 2.0.1  | >= 2.9.0    |
+| h5py       | >= 2.0.1  | >= 2.10.0   |
 +------------+-----------+-------------+
-| netCDF4    | >= 1.0    | >= 1.4.2    |
+| h5netcdf   | >= 0.8.0  | >= 0.8.0    |
 +------------+-----------+-------------+
-| xarray     | >= 0.1    | >= 0.11.3   |
+| netCDF4    | >= 1.0    | >= 1.5.0    |
 +------------+-----------+-------------+
-| xmltodict  | >= 0.11   | >= 0.11.0   |
+| xarray     | >= 0.15   | >= 0.16.0   |
 +------------+-----------+-------------+
-| gdal       | >= 1.9    | >= 2.4.0    |
+| xmltodict  | >= 0.11   | >= 0.12.0   |
++------------+-----------+-------------+
+| gdal       | >= 2.4    | >= 3.1.0    |
 +------------+-----------+-------------+
 
 You can check whether the required `Dependencies`_ are available on your computer by opening a Python console and enter:
@@ -136,6 +138,22 @@ In case the import is successful, you should also check the version number:
 some version number
 
 The version number should be consistent with the above `Dependencies`_.
+
+The following libraries are used by `netCDF4`, `h5py` and `gdal` packages and should apply to these requirements:
+
+.. tabularcolumns:: |L|L|L|
+
++------------+-----------+-------------+
+| Lbrary     |    min    | recommended |
++============+===========+=============+
+| geos       | >= 3.7.0  | >= 3.8.0    |
++------------+-----------+-------------+
+| hdf5       | >= 1.9.0  | >= 1.10.0   |
++------------+-----------+-------------+
+| libnetcdf  | >= 4.7.3  | >= 4.7.4    |
++------------+-----------+-------------+
+| proj4/proj | >= 5.2.0  | >= 7.0.0    |
++------------+-----------+-------------+
 
 
 Optional Dependencies
