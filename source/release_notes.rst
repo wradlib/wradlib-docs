@@ -7,10 +7,63 @@ Please note that :math:`\omega radlib` releases follow `semantic versioning <htt
 
 You can install the latest :math:`\omega radlib` release from PyPI via ``$ pip install wradlib`` or specific version via ``$ pip install wradlib==x.y.z``. The recommended installation process is described in :doc:`installation`.
 
-Bleeding Edge
+Version 1.8.0
 -------------
 
-Nothing, so far.
+**New features**
+* add WN product size (1200,1000) to radolan grid, add test for correct reference point (lower left) (:issue:`448`) reported by `@julste <https://github.com/julste>`_ (:pull:`449`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* add `WN` and `YW` products to radolan to xarray converter (:pull:`450`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**Maintenance**
+* remove deprecated and unused code and handle upstream deprecations (:pull:`450`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**Bugfixes**
+* fix srtm downloads windows path issues and region selection (:pull:`445`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* make `georeference_dataset` work with ND datasets (:pull:`446`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+Version 1.7.4
+-------------
+
+**Bugfixes**
+* update `vis.plot_scan_strategy()` (:issue:`441`) originally reported at `wradlib-users group <https://groups.google.com/g/wradlib-users/c/Vud23QpQtmo/m/ni-e_biVBAAJ>`_ by `@pandasambit15 <https://github.com/pandasambit15>`_ (:pull:`442`) by `@jorahu <https://github.com/jorahu>`_ and `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* add switch to keep elevation data unaltered (DWD terrain following scan) (:issue:`437`, :pull:`443`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+Version 1.7.3
+-------------
+
+**Bugfixes**
+
+* always translate ODIM attributes to CF attributes (:issue:`373`, :pull:`438`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* specify keys (sweep_groups) which should be saved using to_netcdf (:pull:`440`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**Maintenance**
+
+* pin isort  (:pull:`438`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+Version 1.7.2
+-------------
+
+**Bugfixes**
+
+* rework ODIM RHI elevation angle retrieval (:pull:`435`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**Maintenance**
+
+* use pytest for testing, implement "@require_data" to be able to run tests in case of missing wradlib-data (:pull:`434`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* enhance azure ci workflow by adding flake8 linter and uploading coverage (:pull:`436`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* minor changes to README.md
+
+Version 1.7.1
+-------------
+
+**Maintenance**
+
+* add azure CI tests
+* code formatting according to black/isort/flake8, add setup.cfg
+* add show_versions
+* use new semver parse
+* add github templates
+done in (:pull:`432`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
 
 Version 1.7.0
 -------------
