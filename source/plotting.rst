@@ -10,3 +10,4 @@ Plotting
    notebooks/visualisation/wradlib_plot_ppi_xarray
    notebooks/visualisation/wradlib_overlay
    notebooks/visualisation/wradlib_overlay_cartopy
+   notebooks/visualisation/wradlib_plot_scan_strategy.ipynb
