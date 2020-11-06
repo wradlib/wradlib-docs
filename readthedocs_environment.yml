@@ -1,8 +1,8 @@
 channels:
   - conda-forge
 dependencies:
-  - python=3.6
-  - sphinx>=1.4
+  - python=3.8
+  - sphinx
   - pandoc
   - nbconvert
   - ipykernel
@@ -19,3 +19,4 @@ dependencies:
  # - netCDF4
  # - gdal
   - xmltodict
+  - xarray
