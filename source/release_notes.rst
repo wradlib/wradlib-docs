@@ -7,6 +7,23 @@ Please note that :math:`\omega radlib` releases follow `semantic versioning <htt
 
 You can install the latest :math:`\omega radlib` release from PyPI via ``$ pip install wradlib`` or specific version via ``$ pip install wradlib==x.y.z``. The recommended installation process is described in :doc:`installation`.
 
+
+Version 1.9.0
+-------------
+
+**New features**
+* make wradlib.io capable of consuming file-like objects (:issue:`448`) (:pull:`469`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* read truncated RADOLAN composites (reported by `@franzmueller <https://github.com/franzmueller>`_) (:pull:`471`) by `@franzmueller <https://github.com/franzmueller>`_ and `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**Maintenance**
+* use micromamba on CI to save CI time (:issue:`457`) (:pull:`452`, :pull:`464`, :pull:`465`, :pull:`470`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* add Python 3.9 builds to all CI (:pull:`463`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* adapt to new tsring handling in h5py >= 3.0 (:pull:`468`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**Bugfixes**
+* add capability to decode old DX header (:issue:`455`) reported by `@GolGosh <https://github.com/GolGosh>`_ (:pull:`467`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* simplify dimension angle handling ODIM/GAMIC (:pull:`462`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
 Version 1.8.0
 -------------
 
