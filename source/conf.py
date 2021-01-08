@@ -274,6 +274,8 @@ napoleon_use_ivar = False
 napoleon_use_param = True
 napoleon_use_rtype = False
 
+bibtex_bibfiles = ['refs.bib', 'refs_links.bib']
+
 # -- pybtex definitions for changing citation reference labels ----------------
 from pybtex.style.formatting.unsrt import Style  # noqa
 from pybtex.style.labels.alpha import LabelStyle, _strip_nonalnum  # noqa
