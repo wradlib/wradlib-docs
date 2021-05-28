@@ -59,7 +59,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'wradlib'
-copyright = u'2011-2020, wradlib developers'
+copyright = u'2011-2021, wradlib developers'
 docs = subprocess.check_output(['git', 'rev-parse', 'HEAD']).decode().strip()
 url = 'https://github.com/wradlib'
 
@@ -275,6 +275,7 @@ napoleon_use_param = True
 napoleon_use_rtype = False
 
 bibtex_bibfiles = ['refs.bib', 'refs_links.bib']
+bibtex_encoding = 'latin'
 
 # -- pybtex definitions for changing citation reference labels ----------------
 from pybtex.style.formatting.unsrt import Style  # noqa

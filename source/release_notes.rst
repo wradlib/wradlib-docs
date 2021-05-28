@@ -12,15 +12,18 @@ Version 1.9.0
 -------------
 
 **New features**
+
 * make wradlib.io capable of consuming file-like objects (:issue:`448`) (:pull:`469`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
 * read truncated RADOLAN composites (reported by `@franzmueller <https://github.com/franzmueller>`_) (:pull:`471`) by `@franzmueller <https://github.com/franzmueller>`_ and `@kmuehlbauer <https://github.com/kmuehlbauer>`_
 
 **Maintenance**
+
 * use micromamba on CI to save CI time (:issue:`457`) (:pull:`452`, :pull:`464`, :pull:`465`, :pull:`470`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
 * add Python 3.9 builds to all CI (:pull:`463`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
 * adapt to new tsring handling in h5py >= 3.0 (:pull:`468`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
 
 **Bugfixes**
+
 * add capability to decode old DX header (:issue:`455`) reported by `@GolGosh <https://github.com/GolGosh>`_ (:pull:`467`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
 * simplify dimension angle handling ODIM/GAMIC (:pull:`462`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
 
@@ -28,13 +31,16 @@ Version 1.8.0
 -------------
 
 **New features**
+
 * add WN product size (1200,1000) to radolan grid, add test for correct reference point (lower left) (:issue:`448`) reported by `@julste <https://github.com/julste>`_ (:pull:`449`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
 * add `WN` and `YW` products to radolan to xarray converter (:pull:`450`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
 
 **Maintenance**
+
 * remove deprecated and unused code and handle upstream deprecations (:pull:`450`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
 
 **Bugfixes**
+
 * fix srtm downloads windows path issues and region selection (:pull:`445`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
 * make `georeference_dataset` work with ND datasets (:pull:`446`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
 
@@ -42,6 +48,7 @@ Version 1.7.4
 -------------
 
 **Bugfixes**
+
 * update `vis.plot_scan_strategy()` (:issue:`441`) originally reported at `wradlib-users group <https://groups.google.com/g/wradlib-users/c/Vud23QpQtmo/m/ni-e_biVBAAJ>`_ by `@pandasambit15 <https://github.com/pandasambit15>`_ (:pull:`442`) by `@jorahu <https://github.com/jorahu>`_ and `@kmuehlbauer <https://github.com/kmuehlbauer>`_
 * add switch to keep elevation data unaltered (DWD terrain following scan) (:issue:`437`, :pull:`443`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
 
@@ -80,7 +87,7 @@ Version 1.7.1
 * add show_versions
 * use new semver parse
 * add github templates
-done in (:pull:`432`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* all above done in (:pull:`432`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
 
 Version 1.7.0
 -------------

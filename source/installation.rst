@@ -8,9 +8,9 @@ Anaconda/Conda
 
 In order to run :math:`\omega radlib`, you need to have a Python interpreter installed on your local computer, as well as a number of Python packages (`Dependencies`_). We recommend installing `Anaconda <https://www.anaconda.com/what-is-anaconda/>`_ as it includes Python, numerous required packages, and other useful tools (e.g. `Spyder <https://www.spyder-ide.org/>`_).
 
-Using Anaconda the installation process is harmonised across platforms. Download and install the latest Anaconda distribution from https://www.anaconda.com/download/ for your specific OS. You might also consider the minimal `Miniconda <https://conda.io/miniconda.html>`_ if you do not want to install a full scientific python stack.
+Using Anaconda the installation process is harmonised across platforms. Download and install the latest Anaconda distribution from https://www.anaconda.com/download/ for your specific OS. We recommend using the minimal `Miniconda <https://conda.io/miniconda.html>`_ if you do not want to install a full scientific python stack.
 
-We are constantly performing tests with these distributions (for python versions 3.6, 3.7 and 3.8 respectively).
+We are constantly performing tests with these distributions (for the most recent 3 python versions).
 
 If your Anaconda Python installation is working, the following command (in a console) should work::
 
@@ -112,13 +112,13 @@ Dependencies
 +------------+-----------+-------------+
 | scipy      | >= 1.0    | >= 1.5.0    |
 +------------+-----------+-------------+
-| h5py       | >= 2.0.1  | >= 2.10.0   |
+| h5py       | >= 2.0.1  | >= 3.1.0    |
 +------------+-----------+-------------+
-| h5netcdf   | >= 0.8.0  | >= 0.8.0    |
+| h5netcdf   | >= 0.8.0  | >= 0.10.0   |
 +------------+-----------+-------------+
 | netCDF4    | >= 1.0    | >= 1.5.0    |
 +------------+-----------+-------------+
-| xarray     | >= 0.15   | >= 0.16.0   |
+| xarray     | >= 0.15   | >= 0.17.0   |
 +------------+-----------+-------------+
 | xmltodict  | >= 0.11   | >= 0.12.0   |
 +------------+-----------+-------------+

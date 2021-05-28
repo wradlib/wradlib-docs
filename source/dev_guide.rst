@@ -38,4 +38,4 @@ Testing
 
 Continuous Integration
 ----------------------
-We use `Travis_CI <https://travis-ci.com>`_, `Appveyor <https://www.appveyor.com/>`_ and `Azure Pipelines <https://azure.microsoft.com/de-de/services/devops/pipelines/>`_  for Continuous Integration (CI). CI means, in our case, that each commit pushed to :math:`\omega radlib`'s main repository will trigger different test suites on these CI services. If all tests pass successfully, a new documentation will be built on https://readthedocs.org and published on https://docs.wradlib.org. In case a new release tag is associated with a commit, a new release will be distributed via `PyPI <https://pypi.org/project/wradlib/>`_.
+We use Github Actions for Continuous Integration (CI). CI means, in our case, that each commit pushed to :math:`\omega radlib`'s main repository will trigger different test suites on the CI service. If all tests pass successfully, a new documentation will be built on https://readthedocs.org and published on https://docs.wradlib.org. In case a new release tag is associated with a commit, a new release will be distributed via `PyPI <https://pypi.org/project/wradlib/>`_.
