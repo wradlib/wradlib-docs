@@ -255,10 +255,11 @@ html_show_copyright = True
 
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
-    'numpy': ('https://docs.scipy.org/doc/numpy/', None),
+    'numpy': ('https://numpy.org/doc/stable/objects.inv', None),
     'scipy': ('https://docs.scipy.org/doc/scipy/reference/', None),
     'matplotlib': ('https://matplotlib.org/', None),
-    'sphinx': ('http://www.sphinx-doc.org/en/master/', None),
+    'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
+    'xarray': ('http://xarray.pydata.org/en/stable/', None),
 }
 
 # -- Napoleon settings for docstring processing -------------------------------
