@@ -7,6 +7,26 @@ Please note that :math:`\omega radlib` releases follow `semantic versioning <htt
 
 You can install the latest :math:`\omega radlib` release from PyPI via ``$ pip install wradlib`` or specific version via ``$ pip install wradlib==x.y.z``. The recommended installation process is described in :doc:`installation`.
 
+Version 1.10.0
+--------------
+
+**New features**
+
+* add ODIM/GAMIC/CfRadial backends for ``Xarray`` (:pull:`487`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* add RADOLAN backend for ``Xarray`` (:pull:`480`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* decode IRIS ``DB_XHDR`` as numpy structured array (:issue:`362`) (:pull:`488`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**Maintenance**
+
+* move CI to GitHub Actions (:pull:`477`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* create/use earthdata credentials for srtm data (:pull:`481`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* address numpy DeprecationWarnings (:pull:`479`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**Bugfixes**
+
+* fix _FillValue and GAMIC dynamic range (:pull:`486`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* fix doctest example in vpr-module (:pull:`478`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* fix handle kwarg change scipy.cKDTree (:pull:`474`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
 
 Version 1.9.0
 -------------
