@@ -11,12 +11,12 @@ Especially for easy integration with servers we setup the `wradlib-docker <https
    * based on *centos7*
    * plain miniforge installation
 
-#. master-min
+#. main-min
 
    * based on *base*
-   * conda *wradlib* environment with latest wradlib github master including all runtime dependencies
+   * conda *wradlib* environment with latest wradlib github main including all runtime dependencies
 
-#. master-full
+#. main-full
 
    * based on *base*
    * conda *wradlib* environment with latest wradlib release including all runtime dependencies
@@ -25,7 +25,7 @@ Especially for easy integration with servers we setup the `wradlib-docker <https
 #. X.Y.Z-min
 
    * based on *base*
-   * conda *wradlib* environment with X.Y.Z wradlib github master including all runtime dependencies
+   * conda *wradlib* environment with X.Y.Z wradlib github main including all runtime dependencies
 
 #. X.Y.Z-full
 
@@ -40,18 +40,18 @@ In order to run these docker images as containers, you need to have *docker* ins
 
 #. Pull from docker hub using the wanted tag::
 
-    $ docker pull wradlib/wradlib-docker:master-min
+    $ docker pull wradlib/wradlib-docker:main-min
 
 #. Build from scratch::
 
     $ git clone https://github.com/wradlib/wradlib-docker.git
     $ cd wradlib-docker
-    $ export WRADLIB_VER=master
+    $ export WRADLIB_VER=main
     $ export WRADLIB_DOCKER_TAG=min
     $ export DOCKER_REPO=wradlib-docker
     $ docker build --build-arg WRADLIB_VER --build-arg WRADLIB_DOCKER_TAG --build-arg DOCKER_REPO -t wradlib_min .
 
-The only difference is then in the `docker run` command, where `wradlib/wradlib-docker:master-min` is used in the first and `wradlib_min` in the second case.
+The only difference is then in the `docker run` command, where `wradlib/wradlib-docker:main-min` is used in the first and `wradlib_min` in the second case.
 
 Running docker images
 ---------------------
@@ -65,7 +65,7 @@ Here 5 different approaches for running containers are shown.
 
 #. Start container directly into bash::
 
-    $ docker run -ti --name wradlib_min wradlib/wradlib-docker:master-min /bin/bash
+    $ docker run -ti --name wradlib_min wradlib/wradlib-docker:main-min /bin/bash
     Container USER_ID : 9001
     Container GROUP_ID : 100
     Container USER_NAME : wradlib
@@ -80,7 +80,7 @@ Here 5 different approaches for running containers are shown.
 
 #. Start container directly into python (wradlib env)::
 
-    $ docker run -ti --name wradlib_min wradlib/wradlib-docker:master-min /opt/conda/envs/wradlib/bin/python
+    $ docker run -ti --name wradlib_min wradlib/wradlib-docker:main-min /opt/conda/envs/wradlib/bin/python
     Container USER_ID : 9001
     Container GROUP_ID : 100
     Container USER_NAME : wradlib
@@ -91,7 +91,7 @@ Here 5 different approaches for running containers are shown.
 
 #. Initialize *wradlib* user with your users id::
 
-    $ docker run -ti --name wradlib_min -e LOCAL_USER_ID=$UID wradlib/wradlib-docker:master-min /bin/bash
+    $ docker run -ti --name wradlib_min -e LOCAL_USER_ID=$UID wradlib/wradlib-docker:main-min /bin/bash
     Container USER_ID : 701
     Container GROUP_ID : 100
     Container USER_NAME : wradlib
@@ -102,7 +102,7 @@ Here 5 different approaches for running containers are shown.
     $ mkdir docker-test
     $ cd docker-test
     $ echo "Greetings from the host" > greets.txt
-    $ docker run -ti --name wradlib_min -e LOCAL_USER_ID=$UID -v /home/user/docker-test:/home/docker-test wradlib/wradlib-docker:master-min /bin/bash
+    $ docker run -ti --name wradlib_min -e LOCAL_USER_ID=$UID -v /home/user/docker-test:/home/docker-test wradlib/wradlib-docker:main-min /bin/bash
     Container USER_ID : 701
     Container GROUP_ID : 100
     Container USER_NAME : wradlib
@@ -118,9 +118,9 @@ Here 5 different approaches for running containers are shown.
 Jupyter Notebook Server
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-You can run a jupyter notebook server with `master-full` using the following setup. You would need to download `wradlib-notebooks <https://github.com/wradlib/wradlib-notebooks>`_ and `wradlib-data <https://github.com/wradlib/wradlib-data>`_. The docker run command mounts the host folders containing `wradlib-notebooks` and `wradlib-data` into the container::
+You can run a jupyter notebook server with `main-full` using the following setup. You would need to download `wradlib-notebooks <https://github.com/wradlib/wradlib-notebooks>`_ and `wradlib-data <https://github.com/wradlib/wradlib-data>`_. The docker run command mounts the host folders containing `wradlib-notebooks` and `wradlib-data` into the container::
 
-    $ docker run -ti --name wradlib_nb -p 8888:8888 -v /host/path/to/wradlib-notebooks:/home/notebooks -v /host/path/to/wradlib-data:/home/wradlib-data -e LOCAL_USER_ID=$UID -e WRADLIB_DATA=/home/wradlib-data wradlib/wradlib-docker:master-full /opt/conda/envs/wradlib/bin/jupyter notebook --notebook-dir=/home/notebooks --ip='*' --port=8888
+    $ docker run -ti --name wradlib_nb -p 8888:8888 -v /host/path/to/wradlib-notebooks:/home/notebooks -v /host/path/to/wradlib-data:/home/wradlib-data -e LOCAL_USER_ID=$UID -e WRADLIB_DATA=/home/wradlib-data wradlib/wradlib-docker:main-full /opt/conda/envs/wradlib/bin/jupyter notebook --notebook-dir=/home/notebooks --ip='*' --port=8888
 
     [I 08:07:35.865 NotebookApp] Writing notebook server cookie secret to /home/wradlib/.local/share/jupyter/runtime/notebook_cookie_secret
     [W 08:07:36.087 NotebookApp] WARNING: The notebook server is listening on all IP addresses and not using encryption. This is not recommended.

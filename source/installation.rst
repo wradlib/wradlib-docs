@@ -67,7 +67,7 @@ Bleeding edge code
 
 .. warning:: The :math:`\omega radlib` version on `PyPI <https://pypi.org/project/wradlib>`__ might lag behind the actual developments. You can use the bleeding edge code from the :math:`\omega radlib` `repository <https://github.com/wradlib/wradlib>`_. Note, however, that you need to make sure yourself that all `Dependencies`_ are met (see below).
 
-`Download <https://codeload.github.com/wradlib/wradlib/zip/master>`_ the source, unzip, and run::
+`Download <https://codeload.github.com/wradlib/wradlib/zip/main>`_ the source, unzip, and run::
 
     $ python setup.py install
 

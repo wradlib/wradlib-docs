@@ -54,8 +54,8 @@ mathjax_path = ("https://cdn.mathjax.org/mathjax/latest/MathJax.js?"
 # The encoding of source files.
 # source_encoding = 'utf-8-sig'
 
-# The master toctree document.
-master_doc = 'index'
+# The main toctree document.
+root_doc = 'index'
 
 # General information about the project.
 project = u'wradlib'
@@ -75,7 +75,7 @@ if on_rtd:
     # latest wradlib commit
     if rtd_version == 'latest':
         wradlib_notebooks_branch = 'devel'
-        wradlib_branch_or_tag = 'master'
+        wradlib_branch_or_tag = 'main'
     # latest tagged commit
     elif rtd_version == 'stable':
         tag = subprocess.check_output(['git', 'describe',

@@ -48,7 +48,7 @@ In both cases, a browser window will open (typically at http://localhost:8888/tr
 How can I get the example notebooks?
 ------------------------------------
 
-The notebooks are available in the `wradlib-notebooks <https://github.com/wradlib/wradlib-notebooks/>`_ repository. Alternatively, you can `download <https://codeload.github.com/wradlib/wradlib-notebooks/zip/master>`_ the latest ("bleeding edge") notebooks. In both cases, you find everything in the directory ``/notebooks`` (after extracting the downloaded archives).
+The notebooks are available in the `wradlib-notebooks <https://github.com/wradlib/wradlib-notebooks/>`_ repository. Alternatively, you can `download <https://codeload.github.com/wradlib/wradlib-notebooks/zip/main>`_ the latest ("bleeding edge") notebooks. In both cases, you find everything in the directory ``/notebooks`` (after extracting the downloaded archives).
 
 
 .. _ref_get_data:
@@ -56,7 +56,7 @@ The notebooks are available in the `wradlib-notebooks <https://github.com/wradli
 How can I get the example data?
 -------------------------------
 
-Most notebooks use example data. These data are provided in a separate repository and you need to "install" them manually. *"Installing"* actually means: Download the data archive `here <https://codeload.github.com/wradlib/wradlib-data/zip/master>`_ and extract it into any arbitrary directory. Now you need to set an environment variable pointing to that directory:
+Most notebooks use example data. These data are provided in a separate repository and you need to "install" them manually. *"Installing"* actually means: Download the data archive `here <https://codeload.github.com/wradlib/wradlib-data/zip/main>`_ and extract it into any arbitrary directory. Now you need to set an environment variable pointing to that directory:
 
 **Under Windows**, open a console and execute ``setx WRADLIB_DATA <full path to wradlib-data>``.
 

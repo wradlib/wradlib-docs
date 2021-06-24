@@ -15,14 +15,14 @@ Everyone can contribute to the developement of :math:`\omega radlib` by using th
 
 Building the docs
 -----------------
-In order to build the documentation, you need to download the `wradlib-docs <https://github.com/wradlib/wradlib-docs>`_ repository. You need to satisfy a few more dependencies which are mainly related to Sphinx. These are specified in the `readthedocs_environment.yml <https://github.com/wradlib/wradlib-docs/blob/master/readthedocs_environment.yml>`_.
+In order to build the documentation, you need to download the `wradlib-docs <https://github.com/wradlib/wradlib-docs>`_ repository. You need to satisfy a few more dependencies which are mainly related to Sphinx. These are specified in the `readthedocs_environment.yml <https://github.com/wradlib/wradlib-docs/blob/main/readthedocs_environment.yml>`_.
 
 Once these requirements are met, you can open a console window within the ``wradlib-docs``-repository and execute ``sphinx-build -v -b html source/ doc-build``. This will give you the latest documentation under the ``wradlib-docs/doc-build`` directory. Simply open the index.html file to view the documentation.
 
 
 Testing
 -------
-:math:`\omega radlib` uses the `pytest <https://docs.pytest.org/en/stable/>`_ framework. New functions should come with corresponding unittests in the ``wradlib/wradlib/tests`` directory. Just have a look at `available tests <https://github.com/wradlib/wradlib/tree/master/wradlib/tests>`_ to get an idea. In addition, examples and docstrings are a good way to combine testing and documentation. Have a look at the `wradlib-notebooks <https://github.com/wradlib/wradlib-notebooks/tree/master/notebooks>`_ in order to get an idea on how to set these up correctly. In the docstrings, the ``Examples`` section will be tested by our testing framework. This could look like this::
+:math:`\omega radlib` uses the `pytest <https://docs.pytest.org/en/stable/>`_ framework. New functions should come with corresponding unittests in the ``wradlib/wradlib/tests`` directory. Just have a look at `available tests <https://github.com/wradlib/wradlib/tree/main/wradlib/tests>`_ to get an idea. In addition, examples and docstrings are a good way to combine testing and documentation. Have a look at the `wradlib-notebooks <https://github.com/wradlib/wradlib-notebooks/tree/main/notebooks>`_ in order to get an idea on how to set these up correctly. In the docstrings, the ``Examples`` section will be tested by our testing framework. This could look like this::
 
     def foo(a):
         """Docstring to be evaluated by doctest
