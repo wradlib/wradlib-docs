@@ -54,7 +54,7 @@ Documentation
 * :doc:`Attenuation Correction <notebooks/attenuation/wradlib_attenuation>`
 * :doc:`Echo Classification <notebooks/classify>`
 * :doc:`notebooks/georeferencing`
-* :doc:`plotting`
+* :doc:`notebooks/plotting`
 * :doc:`Interpolation <notebooks/interpolation/wradlib_ipol_example>`
 * :doc:`Rainfall Adjustment <notebooks/multisensor/wradlib_adjust_example>`
 * :doc:`zonalstatistics`
@@ -70,7 +70,7 @@ Documentation
    Attenuation Correction <notebooks/attenuation/wradlib_attenuation>
    Echo Classification <notebooks/classify>
    notebooks/georeferencing
-   plotting
+   notebooks/plotting
    Interpolation <notebooks/interpolation/wradlib_ipol_example>
    Rainfall Adjustment <notebooks/multisensor/wradlib_adjust_example>
    zonalstatistics
