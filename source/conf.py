@@ -257,13 +257,14 @@ intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
     'numpy': ('https://numpy.org/doc/stable/', None),
     'scipy': ('https://docs.scipy.org/doc/scipy/reference/', None),
-    'matplotlib': ('https://matplotlib.org/', None),
+    'matplotlib': ('https://matplotlib.org/stable/', None),
     'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
     'xarray': ('https://xarray.pydata.org/en/stable/', None),
+    'cartopy': ('https://scitools.org.uk/cartopy/docs/latest/', None),
 }
 
 # -- Napoleon settings for docstring processing -------------------------------
-napoleon_google_docstring = True
+napoleon_google_docstring = False
 napoleon_numpy_docstring = True
 napoleon_include_private_with_doc = False
 napoleon_include_special_with_doc = False
@@ -271,9 +272,15 @@ napoleon_include_init_with_doc = False
 napoleon_use_admonition_for_examples = False
 napoleon_use_admonition_for_notes = False
 napoleon_use_admonition_for_references = False
-napoleon_use_ivar = False
-napoleon_use_param = True
+napoleon_use_param = False
 napoleon_use_rtype = False
+napoleon_preprocess_types = True
+napoleon_type_aliases = {
+    "sequence": ":term:`sequence`",
+    "file-like": ":term:`file-like <file-like object>`",
+    "array-like": ":term:`array-like <array_like>`",
+    "Path": "~~pathlib.Path",
+}
 
 bibtex_bibfiles = ['refs.bib', 'refs_links.bib']
 bibtex_encoding = 'latin'
