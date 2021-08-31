@@ -261,22 +261,25 @@ intersphinx_mapping = {
     'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
     'xarray': ('https://xarray.pydata.org/en/stable/', None),
     'cartopy': ('https://scitools.org.uk/cartopy/docs/latest/', None),
+    'gdal': ('https://gdal.org/python/', "objects_gdal.inv")
 }
 
 # -- Napoleon settings for docstring processing -------------------------------
 napoleon_google_docstring = False
 napoleon_numpy_docstring = True
-napoleon_include_private_with_doc = False
-napoleon_include_special_with_doc = False
-napoleon_include_init_with_doc = False
-napoleon_use_admonition_for_examples = False
-napoleon_use_admonition_for_notes = False
-napoleon_use_admonition_for_references = False
+#napoleon_include_private_with_doc = False
+#napoleon_include_special_with_doc = False
+#napoleon_include_init_with_doc = False
+#napoleon_use_admonition_for_examples = False
+#napoleon_use_admonition_for_notes = False
+#napoleon_use_admonition_for_references = False
 napoleon_use_param = False
 napoleon_use_rtype = False
 napoleon_preprocess_types = True
 napoleon_type_aliases = {
+    "scalar": ":term:`scalar`",
     "sequence": ":term:`sequence`",
+    "callable": ":py:func:`callable`",
     "file-like": ":term:`file-like <file-like object>`",
     "array-like": ":term:`array-like <array_like>`",
     "Path": "~~pathlib.Path",
