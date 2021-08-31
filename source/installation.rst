@@ -166,7 +166,7 @@ As for now, the following dependencies are defined as optional:
 **The speedup module**
 
 The speedup module is intended as a collection of Fortran code in order to speed up specific :math:`\omega radlib` function that are critical for performance.
-In order to build the speedup module as a shared library, you need to use f2py (https://sysbio.ioc.ee/projects/f2py2e/). f2py usually ships with numpy and should be available via the command line. To test whether f2py is available on your system, execute ``f2py`` on the system console. Or, alternatively, ``f2py.py``. If it is available, you should get a bunch of help instructions. Now change to the :math:`\omega radlib` module directory and execute on the system console::
+In order to build the speedup module as a shared library, you need to use f2py (https://numpy.org/doc/stable/f2py/usage.html). f2py usually ships with numpy and should be available via the command line. To test whether f2py is available on your system, execute ``f2py`` on the system console. Or, alternatively, ``f2py.py``. If it is available, you should get a bunch of help instructions. Now change to the :math:`\omega radlib` module directory and execute on the system console::
 
     $ f2py.py -c -m speedup speedup.f
 
