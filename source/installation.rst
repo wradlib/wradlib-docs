@@ -6,9 +6,9 @@ Installation
 Anaconda/Conda
 --------------
 
-In order to run :math:`\omega radlib`, you need to have a Python interpreter installed on your local computer, as well as a number of Python packages (`Dependencies`_). We recommend installing `Anaconda <https://www.anaconda.com/what-is-anaconda/>`_ as it includes Python, numerous required packages, and other useful tools (e.g. `Spyder <https://www.spyder-ide.org/>`_).
+In order to run :math:`\omega radlib`, you need to have a Python interpreter installed on your local computer, as well as a number of Python packages (`Dependencies`_). We recommend installing `Anaconda <https://www.anaconda.com/products/individual>`_ as it includes Python, numerous required packages, and other useful tools (e.g. `Spyder <https://www.spyder-ide.org/>`_).
 
-Using Anaconda the installation process is harmonised across platforms. Download and install the latest Anaconda distribution from https://www.anaconda.com/download/ for your specific OS. We recommend using the minimal `Miniconda <https://conda.io/miniconda.html>`_ if you do not want to install a full scientific python stack.
+Using Anaconda the installation process is harmonised across platforms. Download and install the latest `Anaconda distribution <https://www.anaconda.com/products/individual>`_ for your specific OS. We recommend using the minimal `Miniconda <https://conda.io/miniconda.html>`_ if you do not want to install a full scientific python stack.
 
 We are constantly performing tests with these distributions (for the most recent 3 python versions).
 
