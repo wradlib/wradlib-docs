@@ -72,7 +72,7 @@ After this procedure, the example notebooks will automagically pull the required
 How to install jupyter?
 -----------------------
 
-As already pointed out above, you can just look at the rendered notebooks `online docs <notebooks/overview.ipynb>`_. In order to use them interactively, you need to install ``jupyter``. ``jupyter`` is shipped with `Anaconda's <https://www.anaconda.com/download/>`_ distribution by default. If you installed :math:`\omega radlib` in a separate *virtual environment* (as recommended :doc:`here <installation>`), you need to install ``jupyter`` in that virtual environment, too::
+As already pointed out above, you can just look at the rendered notebooks `online docs <notebooks/overview.ipynb>`_. In order to use them interactively, you need to install ``jupyter``. ``jupyter`` is shipped with `Anaconda's <https://www.anaconda.com/products/individual>`_ distribution by default. If you installed :math:`\omega radlib` in a separate *virtual environment* (as recommended :doc:`here <installation>`), you need to install ``jupyter`` in that virtual environment, too::
 
     Under Windows:
     > activate wradlib
