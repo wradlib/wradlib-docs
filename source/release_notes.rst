@@ -7,6 +7,33 @@ Please note that :math:`\omega radlib` releases follow `semantic versioning <htt
 
 You can install the latest :math:`\omega radlib` release from PyPI via ``$ pip install wradlib`` or specific version via ``$ pip install wradlib==x.y.z``. The recommended installation process is described in :doc:`installation`.
 
+Version 1.11.0
+--------------
+
+**New features**
+
+* add support for RADOLAN HG product (:pull:`495`) by `@v4lli <https://github.com/v4lli>`_
+* add %M, %J and %Y RADOLAN products (:issue:`504`) (:pull:`517`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**Maintenance**
+
+* rename master -> main
+* fix docstrings (links, types, minor issues) (:pull:`518`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* add .git-blame-ignore-revs (:pull:`519`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**Bugfixes**
+
+* minor fixes in GAMIC and CfRadial readers (:pull:`492`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* use default values for ODIM/OPERA what-group (:pull:`496`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* do not restrict variables, but read all variables for Cf/Radial1 data (:pull:`497`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* correct calculation of angle resolution in ODIM/GAMIC xarray readers reported by `@TiemoMathijssen <https://github.com/TiemoMathijssen>`_ (:pull:`501`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* add mode-kwarg to radolan coordinates/grid functions (:issue:`499`) reported by `@gogglesguy <https://github.com/gogglesguy>`_ (:pull:`502`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* add kwarg origin and FutureWarning to IRIS CartesianImage reader (:issue:`493`) (:pull:`503`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* remove unnecessary gridshape kwarg from docstring in CartesianVolume (:issue:`444`) by `@fuxb <https://github.com/fuxb>`_ (:pull:`505`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* correctly handle single/multiple elevations in wradlib.vis.plot_scan_strategy (:pull:`507`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* fix ODIM xarray reader issues (:issue:`513`), (:issue:`514`) (:pull:`515`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* mention dask in all open_*_mfdataset functions (:issue:`510`) by `@Guruprasadhegde <https://github.com/Guruprasadhegde>`_ (:pull:`516`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
 Version 1.10.0
 --------------
 
