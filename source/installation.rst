@@ -69,7 +69,7 @@ Bleeding edge code
 
 `Download <https://codeload.github.com/wradlib/wradlib/zip/main>`_ the source, unzip, and run::
 
-    $ python setup.py install
+    $ python -m pip install .
 
 Alternatively, you can add the :math:`\omega radlib` directory to your environment variable ``PYTHONPATH``.
 
@@ -81,7 +81,7 @@ Although we recommend using the Anaconda Python Environment you can install :mat
 
 Open a terminal and run::
 
-    $ pip install wradlib
+    $ python -m pip install wradlib
 
 Depending on your system you might need to be root (or sudo the above command) for this to work.
 ``pip`` will then fetch the source distribution from the Python Package Index and run the installation.
@@ -93,36 +93,28 @@ For example the numpy module itself depends on some other libraries, which need 
 
 Therefore we recommend trying to satisfy the dependencies using your favorite package management system.
 
+Installing via ``pip`` tries to install all dependencies, but be sure to have all depending non-python libraries installed. Wheels are not available for all dependencies (eg. GDAL).
+
 
 .. _ref-dependencies:
 
 Dependencies
 ------------
 
-:math:`\omega radlib` was not designed to be a self-contained library. Besides extensive use of Numpy and Scipy, :math:`\omega radlib` uses additional libraries, which you will need to install before you can use :math:`\omega radlib`.
+:math:`\omega radlib` was not designed to be a self-contained library. Besides extensive use of Numpy and Scipy, :math:`\omega radlib` uses additional libraries, which you might need to install before you can use :math:`\omega radlib` depending on your system and installation procedure.
 
 .. tabularcolumns:: |L|L|L|
 
 +------------+-----------+-------------+
 | Package    |    min    | recommended |
 +============+===========+=============+
-| numpy      | >= 1.9    | >= 1.19.0   |
+| numpy      | >= 1.9    | >= 1.21.0   |
++------------+-----------+-------------+
+| scipy      | >= 1.0    | >= 1.7.0    |
 +------------+-----------+-------------+
 | matplotlib | >= 3      | >= 3.3.0    |
 +------------+-----------+-------------+
-| scipy      | >= 1.0    | >= 1.5.0    |
-+------------+-----------+-------------+
-| h5py       | >= 2.0.1  | >= 3.1.0    |
-+------------+-----------+-------------+
-| h5netcdf   | >= 0.8.0  | >= 0.10.0   |
-+------------+-----------+-------------+
-| netCDF4    | >= 1.0    | >= 1.5.0    |
-+------------+-----------+-------------+
-| xarray     | >= 0.15   | >= 0.17.0   |
-+------------+-----------+-------------+
-| xmltodict  | >= 0.11   | >= 0.12.0   |
-+------------+-----------+-------------+
-| gdal       | >= 2.4    | >= 3.1.0    |
+| xarray     | >= 0.17   | >= 0.20.2   |
 +------------+-----------+-------------+
 
 You can check whether the required `Dependencies`_ are available on your computer by opening a Python console and enter:
@@ -139,22 +131,6 @@ some version number
 
 The version number should be consistent with the above `Dependencies`_.
 
-The following libraries are used by `netCDF4`, `h5py` and `gdal` packages and should apply to these requirements:
-
-.. tabularcolumns:: |L|L|L|
-
-+------------+-----------+-------------+
-| Lbrary     |    min    | recommended |
-+============+===========+=============+
-| geos       | >= 3.7.0  | >= 3.8.0    |
-+------------+-----------+-------------+
-| hdf5       | >= 1.9.0  | >= 1.10.0   |
-+------------+-----------+-------------+
-| libnetcdf  | >= 4.7.3  | >= 4.7.4    |
-+------------+-----------+-------------+
-| proj4/proj | >= 5.2.0  | >= 7.0.0    |
-+------------+-----------+-------------+
-
 
 Optional Dependencies
 ---------------------
@@ -162,6 +138,44 @@ Optional Dependencies
 Apart from the obligatory `Dependencies`_, some dependencies in :math:`\omega radlib` are optional. This is because the installation of these dependencies can be somewhat tedious while many :math:`\omega radlib` users will not need them anyway. In case users use a :math:`\omega radlib` function that requires an optional dependency, and this dependency is not satisfied in the local environment, :math:`\omega radlib` will raise an exception.
 
 As for now, the following dependencies are defined as optional:
+
+.. tabularcolumns:: |L|L|L|
+
++------------+-----------+-------------+
+| Package    |    min    | recommended |
++============+===========+=============+
+| dask       | >= 2.20   | >= latest   |
++------------+-----------+-------------+
+| gdal       | >= 2.4    | >= 3.1.0    |
++------------+-----------+-------------+
+| h5py       | >= 2.0.1  | >= 3.1.0    |
++------------+-----------+-------------+
+| h5netcdf   | >= 0.8.0  | >= 0.10.0   |
++------------+-----------+-------------+
+| netCDF4    | >= 1.0    | >= 1.5.0    |
++------------+-----------+-------------+
+| requests   | >= 2.23.0 | >= 2.26.0   |
++------------+-----------+-------------+
+| xmltodict  | >= 0.11   | >= 0.12.0   |
++------------+-----------+-------------+
+
+
+The following libraries are used by `netCDF4`, `h5py`/`h5netcdf` and `gdal` packages and should apply to these requirements:
+
+.. tabularcolumns:: |L|L|L|L
+
++------------+-----------+-------------+---------+
+| Library     |    min    | recommended | used by |
++============+===========+=============+=========+
+| geos       | >= 3.7.0  | >= 3.10.0   | gdal    |
++------------+-----------+-------------+---------+
+| hdf5       | >= 1.9.0  | >= 1.12.1   | h5py    |
++------------+-----------+-------------+---------+
+| libnetcdf  | >= 4.7.3  | >= 4.8.1    | netCDF4 |
++------------+-----------+-------------+---------+
+| proj       | >= 5.2.0  | >= 8.0.0    | gdal    |
++------------+-----------+-------------+---------+
+
 
 **The speedup module**
 

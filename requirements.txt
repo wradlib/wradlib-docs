@@ -5,6 +5,5 @@ sphinx_rtd_theme
 sphinxcontrib-bibtex
 deprecation
 nbsphinx
-xmltodict
 semver
 xarray

@@ -7,6 +7,33 @@ Please note that :math:`\omega radlib` releases follow `semantic versioning <htt
 
 You can install the latest :math:`\omega radlib` release from PyPI via ``$ pip install wradlib`` or specific version via ``$ pip install wradlib==x.y.z``. The recommended installation process is described in :doc:`installation`.
 
+Version 1.12.0
+--------------
+
+**New features**
+
+* add IRIS/Sigmet backend for ``Xarray`` (:issue:`361`) (:pull:`520`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* add Rainbow backend for ``Xarray`` (:issue:`394`, :issue:`459`) suggested by `@wcwoo <https://github.com/wcwoo>`_ and `@maxok <https://github.com/maxok>`_ (:pull:`522`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**Maintenance**
+
+* optionalize dependencies (dask, gdal, h5netcdf, h5py, netCDF4, requests, xmltodict) (:pull:`531`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* utilize pytest-doctestplus (:pull:`530`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* update deprecated matplotlib functionality (:pull:`530`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* docstring updates in several functions (:pull:`530`, ) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* docstring updates in several functions
+
+**Bugfixes**
+
+* use reasonable default values in `io.xarray.to_odim` (gain, offset, nodata, undetect, fillvalue)
+* add cf attributes when reading GAMIC files (:pull:`523`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* fix regression in legacy GAMIC reader (:pull:`523`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* catch `dt.accessor` TypeError (:pull:`529`)  by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* fix thread-lock issue, if dask is not installed (:pull:`531`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* use int instead np.int in radolan header parser (:pull:`531`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* fix several tests (:pull:`531`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* other minor fixes distributed over several PR's
+
 Version 1.11.0
 --------------
 
