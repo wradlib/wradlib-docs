@@ -7,7 +7,7 @@ Please note that :math:`\omega radlib` releases follow `semantic versioning <htt
 
 You can install the latest :math:`\omega radlib` release from PyPI via ``$ pip install wradlib`` or specific version via ``$ pip install wradlib==x.y.z``. The recommended installation process is described in :doc:`installation`.
 
-Version 1.12.0
+Version 1.13.0
 --------------
 
 **New features**
@@ -33,6 +33,11 @@ Version 1.12.0
 * use int instead np.int in radolan header parser (:pull:`531`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
 * fix several tests (:pull:`531`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
 * other minor fixes distributed over several PR's
+
+Version 1.12.0
+--------------
+
+* withdrawn, please use 1.13.0.
 
 Version 1.11.0
 --------------

@@ -288,6 +288,7 @@ napoleon_type_aliases = {
 
 bibtex_bibfiles = ['refs.bib', 'refs_links.bib']
 bibtex_encoding = 'latin'
+# bibtex_cite_id = "cite-{key}"
 
 # -- pybtex definitions for changing citation reference labels ----------------
 from pybtex.style.formatting.unsrt import Style  # noqa
