@@ -7,6 +7,38 @@ Please note that :math:`\omega radlib` releases follow `semantic versioning <htt
 
 You can install the latest :math:`\omega radlib` release from PyPI via ``$ pip install wradlib`` or specific version via ``$ pip install wradlib==x.y.z``. The recommended installation process is described in :doc:`installation`.
 
+Version 1.14.0
+--------------
+
+**New features**
+
+* zonalstats enhancements, new VectorSource class, geopandas connector and more (:pull:`558`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**Maintenance - Code**
+
+* refactor deprecated xarray functionality  (:pull:`533`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* use f-strings where appropriate (:pull:`537`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* remove unnecessary object-inheritance (:pull:`538`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* replace distutils.version.LooseVersion with packaging.version.Version (:pull:`539`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* use dict-literals (:pull:`542`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**Maintenance - Build/CI**
+
+* cancel previous CV builds (:pull:`534`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* use provision-with-micromamba action (:pull:`543`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**Bugfixes**
+
+* remove zero padding of bits in rainbow format (truncate excess bits from flagmap) (:issue:`549`) (:pull:`550`) by `@binomaiheu <https://github.com/binomaiheu>`_
+* raise ValueError if projection cannot be determined from source dataset (:issue:`551`) (:pull:`553`) `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* output full timeslice when calling to_netcdf with no timestep (:issue:`552`) (:pull:`554`) `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* handle variable number of gates in CfRadial1 backend (:issue:`545`) (:pull:`555`) `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* use radar site altitude in bin_altitude calculation (:issue:`546`) (:pull:`556`) `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* take precision into account for RADOLAN WN product (:issue:`548`) (:pull:`557`) `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* correct elevation for negative angles in iris/sigmet RAW data (:issue:`560`) (reported by Ozan Pirbudak from Turkish Met Service)  (:pull:`561`) `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* fix AttributeError: 'str' object has no attribute 'item' (:issue:`562`) (:pull:`561`) `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* use start date/time if end date/time is missing for ODIM reader (:issue:`563`) (reported by Anna Gabbert from University of Graz) (:pull:`564`) `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
 Version 1.13.0
 --------------
 
