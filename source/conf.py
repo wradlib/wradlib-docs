@@ -59,7 +59,7 @@ root_doc = 'index'
 
 # General information about the project.
 project = u'wradlib'
-copyright = u'2011-2021, wradlib developers'
+copyright = u'2011-2022, wradlib developers'
 docs = subprocess.check_output(['git', 'rev-parse', 'HEAD']).decode().strip()
 url = 'https://github.com/wradlib'
 
@@ -331,20 +331,28 @@ class WradlibStyle(Style):
 register_plugin('pybtex.style.labels', 'wrl', WradlibLabelStyle)
 register_plugin('pybtex.style.formatting', 'wrlstyle', WradlibStyle)
 
-# adapt index.rst
-file = open('index.rst', mode='r')
-index = file.read()
-file.close()
+# get version
+version_tuple = wradlib.version.version_tuple
 
-longhash = wradlib.version.git_revision
+# is release
+if len(version_tuple) == 3:
+    gh_tree_name = f"v{wradlib.version.version}"
+else:
+    # extract git revision
+    gh_tree_name = version_tuple[-1].split(".")[0][1:]
+
 try:
-    nb = ('`{0} <{1}/wradlib-notebooks/tree/{2}>`_'.format(nb[0:7], url, nb))
+    nb = ('`{0} <{1}/wradlib-notebooks/tree/{2}>`__'.format(nb[0:7], url, nb))
 except NameError:
     nb = 'Missing'
 
-docs = ('`{0} <{1}/wradlib-docs/tree/{2}>`_'.format(docs[0:7], url, docs))
-rel = ('`{0} <{1}/wradlib/tree/{2}>`_'.format(release, url, longhash))
+docs = ('`{0} <{1}/wradlib-docs/tree/{2}>`__'.format(docs[0:7], url, docs))
 
-file = open('index.rst', mode='w')
-file.write(index.format(notebooks=nb, docs=docs, release=rel))
-file.close()
+rel = ('`{0} <{1}/wradlib/tree/{2}>`__'.format(release, url, gh_tree_name))
+
+rst_epilog = ""
+rst_epilog += f"""
+.. |release-link| replace:: {rel}
+.. |notebooks-link| replace:: {nb}
+.. |docs-link| replace:: {docs}
+"""
