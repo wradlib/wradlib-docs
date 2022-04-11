@@ -7,6 +7,13 @@ Please note that :math:`\omega radlib` releases follow `semantic versioning <htt
 
 You can install the latest :math:`\omega radlib` release from PyPI via ``$ pip install wradlib`` or specific version via ``$ pip install wradlib==x.y.z``. The recommended installation process is described in :doc:`installation`.
 
+Version 1.15.0
+--------------
+
+**New features**
+
+* add Furuno backend (``scn`` and ``SCNX`` files) for ``Xarray`` (:pull:`567`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
 Version 1.14.0
 --------------
 
