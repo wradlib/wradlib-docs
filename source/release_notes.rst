@@ -7,6 +7,32 @@ Please note that :math:`\omega radlib` releases follow `semantic versioning <htt
 
 You can install the latest :math:`\omega radlib` release from PyPI via ``$ pip install wradlib`` or specific version via ``$ pip install wradlib==x.y.z``. The recommended installation process is described in :doc:`installation`.
 
+Version 1.16.0
+--------------
+
+**New features**
+
+* add "ancillary"-keyword to io.radolan._radolan_file (:pull:`574`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* update DWD grids (:pull:`568`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* add open_gpm_dataset (:pull:`571`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**Maintenance - Code**
+
+* update docstring for classify_echo_fuzzy (:pull:`570`) by `@swatelet <https://github.com/swatelet>`_
+* use np.expand_dims instead of np.newaxis to make functions work with xarray DataArray (:pull:`568`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**Maintenance - CI**
+
+* add nc-time-axis to notebook-environment (:pull:`568`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**Bugfixes**
+
+* fix RADOLAN xarray coordinates (which have been off by 0.5km) (:pull:`568`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**Deprecations**
+
+* removes GDAL < 3 compatibility code (:pull:`568`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
 Version 1.15.0
 --------------
 
