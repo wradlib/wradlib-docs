@@ -7,6 +7,25 @@ Please note that :math:`\omega radlib` releases follow `semantic versioning <htt
 
 You can install the latest :math:`\omega radlib` release from PyPI via ``$ pip install wradlib`` or specific version via ``$ pip install wradlib==x.y.z``. The recommended installation process is described in :doc:`installation`.
 
+Version 1.16.1
+--------------
+
+**Bugfixes**
+
+* Use numpy.linspace in ipol.interpolate_polar (:pull:`576`) by `@syedhamidali <https://github.com/syedhamidali>`_
+* FIX: explicitely cast ray indices to int in cfradial1 reader (:pull:`579`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_ 
+* Pre Erad2022 (:pull:`580`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_ 
+* FIX: cfradial1 reader alignments (:pull:`585`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_ 
+
+**Maintenance - Code**
+
+* MNT: use Bearer Token instead of credentials (:pull:`584`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_ 
+* MNT: fix SRTM testing if resource is not available, implement timeout (:pull:`587`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_ 
+
+**Maintenance - CI**
+
+* MNT: add pre-commit (:pull:`577`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_ 
+
 Version 1.16.0
 --------------
 
