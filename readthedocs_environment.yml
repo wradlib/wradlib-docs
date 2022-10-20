@@ -8,7 +8,7 @@ dependencies:
   - ipykernel
   - sphinx_rtd_theme
   - sphinxcontrib-bibtex
-  - numpy>=1.21
+  - numpy
   - deprecation
   - git
   - nbsphinx

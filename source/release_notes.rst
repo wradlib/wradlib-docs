@@ -7,24 +7,29 @@ Please note that :math:`\omega radlib` releases follow `semantic versioning <htt
 
 You can install the latest :math:`\omega radlib` release from PyPI via ``$ pip install wradlib`` or specific version via ``$ pip install wradlib==x.y.z``. The recommended installation process is described in :doc:`installation`.
 
-Version 1.16.1
+Version 1.17.0
 --------------
+
+**New features**
+
+* MNT: use Bearer Token instead of credentials (:pull:`584`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* FIX: enable ODIM reader to read `qualityN` fields (similar to `dataN`) (:pull:`588`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* ENH: read RADOLAN ascii format (:issue:`593`) by `@SandeepAllampalli <https://github.com/SandeepAllampalli>`_ and (:pull:`594`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* ENH: add RADVOR products RV, RE and RQ (:issue:`591`) by `@heistermann <https://github.com/heistermann>`_ and (:pull:`594`) by `@heistermann <https://github.com/heistermann>`_ and `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**Maintenance code**
+
+* MNT: add pre-commit (:pull:`577`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* Pre Erad2022 (:pull:`580`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* MNT: fix SRTM testing if resource is not available, implement timeout (:issue:`586`) and (:pull:`587`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
 
 **Bugfixes**
 
 * Use numpy.linspace in ipol.interpolate_polar (:pull:`576`) by `@syedhamidali <https://github.com/syedhamidali>`_
-* FIX: explicitely cast ray indices to int in cfradial1 reader (:pull:`579`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_ 
-* Pre Erad2022 (:pull:`580`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_ 
-* FIX: cfradial1 reader alignments (:pull:`585`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_ 
-
-**Maintenance - Code**
-
-* MNT: use Bearer Token instead of credentials (:pull:`584`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_ 
-* MNT: fix SRTM testing if resource is not available, implement timeout (:pull:`587`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_ 
-
-**Maintenance - CI**
-
-* MNT: add pre-commit (:pull:`577`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_ 
+* FIX: explicitely cast ray indices to int in cfradial1 reader (:pull:`579`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* FIX: add missing finally (:pull:`581`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* FIX: cfradial1 reader alignments (:pull:`585`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* FIX: use 'None' instead of ambiguous 'False' (`0`) for comparison (:pull:`595`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
 
 Version 1.16.0
 --------------
