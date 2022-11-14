@@ -7,6 +7,26 @@ Please note that :math:`\omega radlib` releases follow `semantic versioning <htt
 
 You can install the latest :math:`\omega radlib` release from PyPI via ``$ pip install wradlib`` or specific version via ``$ pip install wradlib==x.y.z``. The recommended installation process is described in :doc:`installation`.
 
+Version 1.18.0
+--------------
+
+**New features**
+
+* Histo cut enhancement (:issue:`602`) by `@overeem11 <https://github.com/overeem11>`_, (:pull:`603`) and (:pull:`605`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**Maintenance code**
+
+* xradar compatibility preparations (:pull:`599`) and (:pull:`602`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**Maintenance - CI**
+
+* MNT: update CI actions, python versions (:pull:`604`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**Bugfixes**
+
+* Changes in # read metadata under get_radiosonde() (:issue:`596`) and (:pull:`597`) by `@JulianGiles <https://github.com/JulianGiles>`_
+* FIX: cfradial2 coordinates (:issue:`600`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
 Version 1.17.0
 --------------
 
