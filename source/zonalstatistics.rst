@@ -6,4 +6,5 @@ Zonal Statistics
 
    notebooks/zonalstats/wradlib_zonalstats_classes
    notebooks/zonalstats/wradlib_zonalstats_quickstart
-   notebooks/zonalstats/wradlib_zonalstats_example
+   notebooks/zonalstats/wradlib_zonalstats_polar_grid
+   notebooks/zonalstats/wradlib_zonalstats_cartesian_grid

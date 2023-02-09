@@ -45,7 +45,6 @@ Documentation
 
    installation
    docker
-   ide
 
 **User Guide**
 

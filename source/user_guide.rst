@@ -2,8 +2,8 @@ Introduction
 ============
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 4
 
    jupyter.rst
-   notebooks/learnpython
-   notebooks/basics
+   notebooks/python/learnpython
+   notebooks/basics/basics
