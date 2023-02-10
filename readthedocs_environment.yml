@@ -15,4 +15,4 @@ dependencies:
   - nbsphinx
   - semver
   - xarray
-  - xradar>=0.0.13
+  - xradar
