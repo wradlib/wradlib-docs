@@ -11,6 +11,11 @@ wradlib: An Open Source Library for Weather Radar Data Processing
 :notebooks: |notebooks-link|
 :docs: |docs-link|
 
+.. note::
+
+   :math:`\omega radlib` version line 1.19 is the last version before :math:`\omega radlib` v2.0. Please pay attention to deprecations and update your code accordingly.
+
+
 The :math:`\omega radlib` project has been initiated in order facilitate the use of weather radar data as well as to provide a common platform for research on new algorithms. :math:`\omega radlib` is an open source library which is well documented and easy to use. It is written in the free programming language `Python <https://www.python.org>`_. As of version 1.3 :math:`\omega radlib` is Python 3 only.
 
 .. note::
@@ -36,7 +41,6 @@ Documentation
 
 * :doc:`installation`
 * :doc:`docker`
-* :doc:`ide`
 
 .. toctree::
    :maxdepth: 1

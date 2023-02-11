@@ -3,9 +3,31 @@
 Release Notes
 =============
 
-Please note that :math:`\omega radlib` releases follow `semantic versioning <https://semver.org/>`_. API breaks will be announced via deprecation warnings. All :math:`\omega radlib` releases come without any warranty. Release notes might be incomplete. See `here <https://github.com/wradlib/wradlib/commits/main>`_ for a complete record of changes.
+Please note that :math:`\omega radlib` releases follow `semantic versioning <https://semver.org/>`_. API breaks will be announced via deprecation warnings. All :math:`\omega radlib` releases come without any warranty. Release notes might be incomplete. See `the commits <https://github.com/wradlib/wradlib/commits/main>`_ for a complete record of changes.
 
-You can install the latest :math:`\omega radlib` release from PyPI via ``$ pip install wradlib`` or specific version via ``$ pip install wradlib==x.y.z``. The recommended installation process is described in :doc:`installation`.
+You can install the latest :math:`\omega radlib` release from PyPI via ``$ python -m pip install wradlib`` or specific version via ``$ python -m pip install wradlib==x.y.z``. The recommended installation process is described in :doc:`installation`.
+
+Version 1.19.0
+--------------
+
+This version is most likely the last version before wradlib 2.0. We've switched to use `xradar <https://docs.openradarscience.org/projects/xradar>`_ for reading radar data in polar coordinates. The relevant code has been ported from wradlib to xradar and only a shallow compatibility layer is kept in wradlib.
+
+**New features**
+
+* Enhance Furuno Reader to read WR110 data (:pull:`606`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+* New function for cross sections (RHI) from radar volume (:issue:`439`) by `@pandasambit15 <https://github.com/pandasambit15>`_ and (:pull:`610`) by `@JulianGiles <https://github.com/JulianGiles>`_
+
+**Maintenance code**
+
+* Adapt codebase to use xradar, move/remove duplicate code (:pull:`617`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**Maintenance - CI**
+
+* several updates and fixes to the CI (:pull:`604`), (:pull:`613`), (:pull:`616`), (:pull:`618`) by `@kmuehlbauer <https://github.com/kmuehlbauer>`_
+
+**Bugfixes**
+
+* delete tmp-files for VectorSource after closing (:issue:`608`) and (:pull:`609`) by `@plvoit <https://github.com/plvoit>`_
 
 Version 1.18.0
 --------------

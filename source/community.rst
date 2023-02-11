@@ -6,9 +6,9 @@ Users
 
 :math:`\omega radlib` is intended to be a community effort, and community needs communication.
 
-The key communication platform for :math:`\omega radlib` is the  `wradlib-users <https://groups.google.com/forum/?fromgroups=#!forum/wradlib-users>`_ mailing list and forum. Through this forum, you can help to improve :math:`\omega radlib` by reporting bugs, proposing enhancements, or by contributing code snippets (in any programming language) and documentation of algorithms.
+The key communication platform for :math:`\omega radlib` is beside the `wradlib GitHub repo <https://github.com/wradlib/wradlib>`_ the `openradar-discourse <https://openradar.discourse.group/>`_ discussion forum. Through both ways, you can help to improve :math:`\omega radlib` by reporting bugs, proposing enhancements, or by contributing code snippets (in any programming language) and documentation of algorithms.
 
-You can also ask other users and developers for help, or use your own knowledge and experience to help other users. We strongly encourage you to `subscribe <https://groups.google.com/forum/#!forum/wradlib-users/join>`_ to this list. Check it out!
+You can also ask other users and developers for help, or use your own knowledge and experience to help other users. We strongly encourage you to subscribe to `openradar-discourse <https://openradar.discourse.group/>`_. Check it out!
 
 How to contribute to :math:`\omega radlib`?
 -------------------------------------------

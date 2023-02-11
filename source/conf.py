@@ -41,8 +41,8 @@ extensions = ['nbsphinx',
               ]
 
 extlinks = {
-    "issue": ("https://github.com/wradlib/wradlib/issues/%s", "GH"),
-    "pull": ("https://github.com/wradlib/wradlib/pull/%s", "PR"),
+    "issue": ("https://github.com/wradlib/wradlib/issues/%s", "GH%s"),
+    "pull": ("https://github.com/wradlib/wradlib/pull/%s", "PR%s"),
 }
 
 mathjax_path = ("https://cdn.mathjax.org/mathjax/latest/MathJax.js?"
@@ -113,7 +113,7 @@ if on_rtd:
                               shell=True)
 
     # install wradlib target branch/tag
-    subprocess.check_call(['pip', 'install', '--no-deps', '--upgrade',
+    subprocess.check_call(['python', '-m', 'pip', 'install', '--no-deps', '--upgrade',
                            "git+{0}/wradlib.git@{1}"
                            "".format(url, wradlib_branch_or_tag)])
 
@@ -260,14 +260,14 @@ templates_path = ['_templates']
 html_show_copyright = True
 
 intersphinx_mapping = {
-    'python': ('https://docs.python.org/3/', None),
-    'numpy': ('https://numpy.org/doc/stable/', None),
-    'scipy': ('https://docs.scipy.org/doc/scipy/objects.inv', None),
-    'matplotlib': ('https://matplotlib.org/stable/', None),
-    'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
-    'xarray': ('https://docs.xarray.dev/en/stable/objects.inv', None),
-    'cartopy': ('https://scitools.org.uk/cartopy/docs/latest/', None),
-    'gdal': ('https://gdal.org/python/', "objects_gdal.inv")
+    'python': ('https://docs.python.org/3', None),
+    'numpy': ('https://numpy.org/doc/stable', None),
+    'scipy': ('https://docs.scipy.org/doc/scipy', None),
+    'matplotlib': ('https://matplotlib.org/stable', None),
+    'sphinx': ('https://www.sphinx-doc.org/en/master', None),
+    'xarray': ('https://docs.xarray.dev/en/stable', None),
+    'cartopy': ('https://scitools.org.uk/cartopy/docs/latest', None),
+    'gdal': ('https://gdal.org/python', "objects_gdal.inv")
 }
 
 # -- Napoleon settings for docstring processing -------------------------------

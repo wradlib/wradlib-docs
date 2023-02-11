@@ -8,9 +8,9 @@ Anaconda/Conda
 
 In order to run :math:`\omega radlib`, you need to have a Python interpreter installed on your local computer, as well as a number of Python packages (`Dependencies`_). We recommend installing `Anaconda <https://www.anaconda.com/products/individual>`_ as it includes Python, numerous required packages, and other useful tools (e.g. `Spyder <https://www.spyder-ide.org/>`_).
 
-Using Anaconda the installation process is harmonised across platforms. Download and install the latest `Anaconda distribution <https://www.anaconda.com/products/individual>`_ for your specific OS. We recommend using the minimal `Miniconda <https://conda.io/miniconda.html>`_ if you do not want to install a full scientific python stack.
+Using Anaconda the installation process is harmonised across platforms. Download and install the latest `Anaconda distribution <https://www.anaconda.com/products/individual>`_ for your specific OS. We recommend using the minimal `Miniforge or Mambaforge <https://github.com/conda-forge/miniforge>`_ if you do not want to install a full scientific python stack (see `Mambaforge`_).
 
-We are constantly performing tests with these distributions (for the most recent 3 python versions).
+We are constantly performing tests with `conda-forge <https://conda-forge.org/>`_ community channel (for the most recent 3 python versions).
 
 If your Anaconda Python installation is working, the following command (in a console) should work::
 
@@ -29,7 +29,7 @@ Now you can use the ``conda`` package and environment manager (`conda documentat
 
 #. Create a new environment from scratch::
 
-    $ conda create --name wradlib python=3.8
+    $ conda create --name wradlib python=3.11
 
 #. Activate the :math:`\omega radlib` environment::
 
@@ -41,18 +41,25 @@ Now you can use the ``conda`` package and environment manager (`conda documentat
 
 Now you have a ``conda`` environment with a working :math:`\omega radlib` installation.
 
+Mambaforge
+----------
+
+This is our recommended method. The install procedure is essentially the same as with Anaconda/Miniconda but it will utilize the fast drop-in replacement `mamba <https://mamba.readthedocs.io/>`_. Please refer to their documentation.
+
+Testdrive
+---------
+
 Test the integrity of your :math:`\omega radlib` installation by opening a console window and typing calling the python interpreter::
 
     $ python
-    Python 3.7.8 | packaged by conda-forge | (default, Jul 31 2020, 02:25:08)
-    [GCC 7.5.0] on linux
+    Python 3.11.0 | packaged by conda-forge | (main, Jan 14 2023, 12:27:40) [GCC 11.3.0] on linux
     Type "help", "copyright", "credits" or "license" for more information.
 
 The Python prompt should appear. Then type::
 
     >>> import wradlib
     >>> wradlib.__version__
-    '1.8.0'
+    '1.19.0'
 
 If everything is ok, this will show the running :math:`\omega radlib` version. If the :math:`\omega radlib` package is not found by the interpreter, you will get::
 
@@ -116,6 +123,8 @@ Dependencies
 +------------+-----------+-------------+
 | xarray     | >= 0.17   | >= 0.20.2   |
 +------------+-----------+-------------+
+| xradar     | >=0.0.13  | >= 0.0.13   |
++------------+-----------+-------------+
 
 You can check whether the required `Dependencies`_ are available on your computer by opening a Python console and enter:
 
@@ -144,6 +153,8 @@ As for now, the following dependencies are defined as optional:
 +------------+-----------+-------------+
 | Package    |    min    | recommended |
 +============+===========+=============+
+| cartopy    | >= 0.21   | >= latest   |
++------------+-----------+-------------+
 | dask       | >= 2.20   | >= latest   |
 +------------+-----------+-------------+
 | gdal       | >= 2.4    | >= 3.1.0    |
@@ -159,13 +170,12 @@ As for now, the following dependencies are defined as optional:
 | xmltodict  | >= 0.11   | >= 0.12.0   |
 +------------+-----------+-------------+
 
-
 The following libraries are used by `netCDF4`, `h5py`/`h5netcdf` and `gdal` packages and should apply to these requirements:
 
-.. tabularcolumns:: |L|L|L|L
+.. tabularcolumns:: |L|L|L|L|
 
 +------------+-----------+-------------+---------+
-| Library     |    min    | recommended | used by |
+| Library    |    min    | recommended | used by |
 +============+===========+=============+=========+
 | geos       | >= 3.7.0  | >= 3.10.0   | gdal    |
 +------------+-----------+-------------+---------+
@@ -195,6 +205,6 @@ Depending on your OS and installation method you may encounter different problem
 
 We strongly recommend using the Anaconda conda package and environment manager (see `Installation`_). Using `conda-forge <https://conda-forge.org/>`_ we will maintain the `wradlib-feedstock <https://github.com/conda-forge/wradlib-feedstock/>`_ for constant availability of recent :math:`\omega radlib` versions.
 
-If you can't use Anaconda/Miniconda, it is generally a good idea to use your systems package manager to install dependencies. This will also take account for other needed bindings, libs etc.
+If you can't use Anaconda/Miniconda/Mambforge, it is generally a good idea to use your systems package manager to install dependencies. This will also take account for other needed bindings, libs etc.
 
-If you encounter problems installing :math:`\omega radlib`, check on your favorite search engine or create an issue `here <https://github.com/wradlib/wradlib/issues>`_ with details on the problem or send an email on the `wradlib-users <https://groups.google.com/forum/?fromgroups=#!forum/wradlib-users>`_ mailing list.
+If you encounter problems installing :math:`\omega radlib`, check on your favorite search engine or create an issue `at the wradlib issue tracker <https://github.com/wradlib/wradlib/issues>`_ with details on the problem or check with the `openradar-discourse <https://openradar.discourse.group/>`_.

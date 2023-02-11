@@ -12,7 +12,7 @@ Some suitable IDEs
 
 There is a `comprehensive Wiki article on Python IDEs <https://wiki.python.org/moin/IntegratedDevelopmentEnvironments>`_. Maybe a bit too comprehensive... if you already are used to an IDE and happy with it, there is no reason to change it.
 
-However, if you have no idea which IDE to choose, why not start with `Spyder <https://www.spyder-ide.org/>`_? It is included in the `Anaconda Python Distribution <https://www.anaconda.com/products/individual>`_ by default. If you installed Anaconda, just open a shell (Anaconda Prompt on Windows) and enter::
+However, if you have no idea which IDE to choose, why not start with `Spyder <https://www.spyder-ide.org/>`_? It is included in the `Anaconda Python Distribution <https://www.anaconda.com/products/individual>`_ by default. Or just install it in any conda-environment. Then all you have to do is open a shell and enter::
 
     $ spyder
 
