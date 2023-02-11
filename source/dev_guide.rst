@@ -3,7 +3,7 @@ Developer Guide
 
 Setup
 -----
-The section :doc:`installation` will provide you with detailed guidance on how to install :math:`\omega radlib` and the required dependencies for different operating systems (MS Windows, Linux, Mac OS). :math:`\omega radlib` |release| has been tested with the latest Anaconda Python on linux-64. It is available via `conda-forge` channel on linux-64, osx-64 and MS Windows 64 versions.
+The section :doc:`installation` will provide you with detailed guidance on how to install :math:`\omega radlib` and the required dependencies for different operating systems (MS Windows, Linux, Mac OS). :math:`\omega radlib` |release| has been tested with the latest conda-forge Python on linux-64. It is available via `conda-forge` channel on linux-64, osx-64 and MS Windows 64 versions.
 
 As a developer, though, you should rather link into :math:`\omega radlib`'s version control. This way, it will be easier for you to track changes and to contribute your changes to :math:`\omega radlib`'s main respository (see next section). Just install `Git <https://git-scm.com/>`_, then clone the :math:`\omega radlib` repository to your local system by executing the following command in your shell: ``git clone https://github.com/wradlib/wradlib.git``. Do not forget to set the ``PYTHONPATH`` to point to the corresponding directory.
 
@@ -38,4 +38,6 @@ Testing
 
 Continuous Integration
 ----------------------
-We use Github Actions for Continuous Integration (CI). CI means, in our case, that each commit pushed to :math:`\omega radlib`'s main repository will trigger different test suites on the CI service. If all tests pass successfully, a new documentation will be built on https://readthedocs.org and published on https://docs.wradlib.org. In case a new release tag is associated with a commit, a new release will be distributed via `PyPI <https://pypi.org/project/wradlib/>`_.
+We use Github Actions for Continuous Integration (CI). CI means, in our case, that each commit pushed to :math:`\omega radlib`'s main repository as well as within each Pull request will trigger different test suites on the CI service. If all tests pass successfully, a new documentation will be built on https://readthedocs.org and published on https://docs.wradlib.org. In case a new release tag is associated with a commit, a new release will be distributed via `PyPI <https://pypi.org/project/wradlib/>`_.
+
+

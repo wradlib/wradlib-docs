@@ -12,7 +12,7 @@ Interactive examples with jupyter notebooks
 
 All :math:`\omega radlib` examples are distributed as `jupyter notebooks <https://jupyter.org/>`_ in the `wradlib-notebooks <https://github.com/wradlib/wradlib-notebooks/>`_ repository. This way, you can interactively explore various topics. Each notebook is organized in documented code blocks. You can browse through a notebook block by block, inspect the results, and experiment with the code. However, you can also view the rendered notebooks including the example results on the web pages of this section: Each page was directly generated from :math:`\omega radlib`'s example notebooks. This way, you can copy&paste code snippets directly into your applications.
 
-.. note:: Are you using :math:`\omega radlib` on the `Open Virtual Machine for Cross-Platform Weather Radar Science <https://openradarscience.org/>`_? Then skip the rest: just log in, run the command ``$ ./start_notebook.sh`` and direct your browser to `http://127.0.0.1:8888/tree <http://127.0.0.1:8888/tree>`__. That's it.
+.. note:: Are you using :math:`\omega radlib` with the `Open Radar Science Shortcourse <https://openradarscience.org/erad2022/>`_? Then please follow-up there to get your openradar software stack running.
 
 Otherwise, you need to make sure to
 
